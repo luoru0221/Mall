@@ -24,7 +24,7 @@ public class DbConnection {
             //加载配置文件
             Properties properties = new Properties();
             properties.load(Objects.requireNonNull(DbConnection.class.getClassLoader().getResourceAsStream("druid.properties")));
-            //获得数据库连接池对象
+            //获得数据库连接对象
             dataSource = DruidDataSourceFactory.createDataSource(properties);
         }catch (Exception e) {
             e.printStackTrace();
@@ -36,33 +36,6 @@ public class DbConnection {
      */
     public static Connection getConnection() throws SQLException {
         return dataSource.getConnection();
-    }
-
-    /**
-     *关闭数据库连接
-     */
-    public static void close(ResultSet resultSet, Statement statement,Connection connection){
-        try {
-            if (resultSet!=null){
-                resultSet.close();
-            }
-            if(statement!=null){
-                statement.close();
-            }
-            if(connection!=null){
-                connection.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void close(Statement statement,Connection connection){
-        close(null,statement,connection);
-    }
-
-    public static DataSource getDataSource(){
-        return dataSource;
     }
 
 }
