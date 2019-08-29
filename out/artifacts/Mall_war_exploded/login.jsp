@@ -30,12 +30,18 @@
             <div class="form_con">
                 <div class="form_input cur">
                     <form action="loginController" method="post">
-                        <input type="text" name="username" class="name_input" placeholder="请输入用户名">
+                        <label>
+                            <input class="name_input" name="username" placeholder="请输入用户名" type="text">
+                        </label>
                         <div class="user_error"></div>
-                        <input type="password" name="password" class="pass_input" placeholder="请输入密码">
+                        <label>
+                            <input type="password" name="password" class="pass_input" placeholder="请输入密码">
+                        </label>
                         <div class="pwd_error"></div>
                         <div class="more_input priority">
-                            <input type="checkbox" name="keepLogin">
+                            <label>
+                                <input type="checkbox" name="keepLogin">
+                            </label>
                             <label>记住登录</label>
                             <a href="find_password.html">忘记密码</a>
                         </div>
