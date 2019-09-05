@@ -19,10 +19,10 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         String sql = "SELECT * FROM USERS WHERE ID = ?";
         ResultSet resultSet = this.doQuery(sql, new Object[]{id});
         try {
-            if (resultSet.next()){
+            if (resultSet.next()) {
                 String userId = resultSet.getString("id");
                 String userPwd = resultSet.getString("password");
-                user = new User(userId,userPwd);
+                user = new User(userId, userPwd);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -32,8 +32,28 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         return user;
     }
 
+    /**
+     * 添加新用户，参数为User对象
+     * 返回值大于0则添加成功
+     */
     @Override
-    public int addUser() {
-        return 0;
+    public int addUser(User newUser) {
+        try {
+            String sql = "INSERT INTO USERS (id,name,password,email) VALUES (?,?,?,?)";
+            Object[] params = {newUser.getId(), newUser.getName(), newUser.getPassword(), newUser.getEmail()};
+            return this.doUpdate(sql, params);
+        } finally {
+            this.close();
+        }
     }
+
+    /**
+     *根据Id删除User
+     */
+    @Override
+    public int deleteUserById(String id){
+        String sql = "DELETE FROM USERS WHERE id = ?";
+        return this.doUpdate(sql,new Object[]{id});
+    }
+
 }

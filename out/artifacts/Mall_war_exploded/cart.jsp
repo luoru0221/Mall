@@ -1,0 +1,122 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>1号店-购物车</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+</head>
+<body>
+<div class="header_con">
+    <div class="header">
+        <div class="welcome fl">欢迎来到1号店!</div>
+        <div class="fr">
+            <div class="login_info fl">
+                欢迎您：<em>张 山</em>
+            </div>
+            <div class="login_btn fl">
+                <a href="login.jsp">登录</a>
+                <span>|</span>
+                <a href="register.jsp">注册</a>
+            </div>
+            <div class="user_link fl">
+                <span>|</span>
+                <a href="">用户中心</a>
+                <span>|</span>
+                <a href="cart.jsp">我的购物车</a>
+                <span>|</span>
+                <a href="">我的订单</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="search_bar priority">
+    <a href="index.jsp" class="logo fl"><img src="images/logo03.png" alt="logo"></a>
+    <div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;购物车</div>
+    <div class="search_con fr">
+        <label>
+            <input type="text" class="input_text fl" name="" placeholder="搜索商品">
+        </label>
+        <input type="button" class="input_btn fr" name="" value="搜索">
+    </div>
+</div>
+
+<div class="total_count">全部商品<em>2</em>件</div>
+<ul class="cart_list_th clearfix">
+    <li class="col01">商品名称</li>
+    <li class="col02">商品单位</li>
+    <li class="col03">商品价格</li>
+    <li class="col04">数量</li>
+    <li class="col05">小计</li>
+    <li class="col06">操作</li>
+</ul>
+<ul class="cart_list_td priority">
+    <li class="col01"><label>
+        <input type="checkbox" name="" checked>
+    </label></li>
+    <li class="col02"><img src="images/goods/phone02.png" alt="image"></li>
+    <li class="col03">华为P30 Pro<br><em>4988元/部</em></li>
+    <li class="col04">部</li>
+    <li class="col05">4988元</li>
+    <li class="col06">
+        <div class="num_add">
+            <a href="javascript:" class="add fl">+</a>
+            <label>
+                <input type="text" class="num_show fl" value="1">
+            </label>
+            <a href="javascript:" class="minus fl">-</a>
+        </div>
+    </li>
+    <li class="col07">4988元</li>
+    <li class="col08"><a href="javascript:">删除</a></li>
+</ul>
+
+<ul class="cart_list_td priority">
+    <li class="col01"><label>
+        <input type="checkbox" name="" checked>
+    </label></li>
+    <li class="col02"><img src="images/goods/phone01.jpg" alt="image"></li>
+    <li class="col03">Redmi Note7 Pro<br><em>1399元/部</em></li>
+    <li class="col04">部</li>
+    <li class="col05">1399元</li>
+    <li class="col06">
+        <div class="num_add">
+            <a href="javascript:" class="add fl">+</a>
+            <label>
+                <input type="text" class="num_show fl" value="1">
+            </label>
+            <a href="javascript:" class="minus fl">-</a>
+        </div>
+    </li>
+    <li class="col07">1399元</li>
+    <li class="col08"><a href="javascript:">删除</a></li>
+</ul>
+
+<ul class="settlements">
+    <li class="col01"><label>
+        <input type="checkbox" name="" checked="checked">
+    </label></li>
+    <li class="col02">全选</li>
+    <li class="col03">合计(不含运费)：<span>¥</span><em>6387</em><br>共计<b>2</b>件商品</li>
+    <li class="col04"><a href="">去结算</a></li>
+</ul>
+
+<div class="footer">
+    <div class="foot_link">
+        <a href="#">关于我们</a>
+        <span>|</span>
+        <a href="#">联系我们</a>
+        <span>|</span>
+        <a href="#">招聘人才</a>
+        <span>|</span>
+        <a href="#">友情链接</a>
+    </div>
+    <p>CopyRight © 2019 吉首大学CCW</p>
+    <p>电话：0730-****888    湘ICP备*******8号</p>
+</div>
+
+</body>
+</html>

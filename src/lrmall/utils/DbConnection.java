@@ -12,7 +12,6 @@ import java.util.Properties;
 
 /**
  * 数据库连接工具
- * 使用Druid数据库连接池
  */
 public class DbConnection {
 

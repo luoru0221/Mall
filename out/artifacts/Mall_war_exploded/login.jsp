@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@taglib prefix="fun" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Mall-登录</title>
+    <title>1号店-登录</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -29,7 +29,7 @@
             </div>
             <div class="form_con">
                 <div class="form_input cur">
-                    <form action="loginController" method="post">
+                    <form action="login" method="post">
                         <label>
                             <input class="name_input" name="username" placeholder="请输入用户名" type="text">
                         </label>
@@ -51,7 +51,7 @@
             </div>
             <div class="third_party">
                 <label id="prompt">${requestScope.prompt}</label>
-                <a href="register.html" class="register_btn">立即注册</a>
+                <a href="register.jsp" class="register_btn">立即注册</a>
             </div>
 
         </div>

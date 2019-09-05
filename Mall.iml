@@ -28,5 +28,7 @@
     <orderEntry type="library" exported="" name="jstl" level="project" />
     <orderEntry type="library" exported="" name="mysql-connector-java-8.0.16" level="project" />
     <orderEntry type="library" exported="" name="standard" level="project" />
+    <orderEntry type="library" name="javax.activation-1.1.0.v201105071233" level="project" />
+    <orderEntry type="library" name="mail" level="project" />
   </component>
 </module>
