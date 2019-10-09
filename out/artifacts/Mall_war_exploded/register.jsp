@@ -27,7 +27,7 @@
                     <li>
                         <label for="user_name">用户名:</label>
                         <input type="text" name="user_name" id="user_name">
-                        <span class="error_tip">请输入5-20个字符的用户</span>
+                        <span class="error_tip">请输入1-20个字符的用户</span>
                     </li>
                     <li>
                         <label for="pwd">密码:</label>

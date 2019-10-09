@@ -46,7 +46,7 @@ $(function () {
 
     function checkUserName() {
         var len = $('#user_name').val().length;
-        if (len < 5 || len > 20) {
+        if (len < 1 || len > 20) {
             $('#user_name').next().show();
             error_name = true;
         } else {
@@ -139,7 +139,7 @@ function sendMCode() {
     }
 
     //发送请求，参数分别为：发送方式   发送地址   是否异步传输
-    request.open("POST", "sendEmailCode?address=" + address, true);
+    request.open("GET", "sendEmailCode?address=" + address, true);
     request.send();
 
 }

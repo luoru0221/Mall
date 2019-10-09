@@ -1,4 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@taglib prefix="fun" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,27 +12,33 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
 </head>
 <body>
 <div class="header_con">
     <div class="header">
         <div class="welcome fl">欢迎来到1号店!</div>
         <div class="fr">
-            <div class="login_info fl">
-                欢迎您：<em>张 山</em>
-            </div>
             <div class="login_btn fl">
-                <a href="login.jsp">登录</a>
+                <c:if test="${sessionScope.loginId == null}">
+                    <a href="login.jsp">登录</a>
+                </c:if>
+                <c:if test="${sessionScope.loginId != null}">
+                    <a href="usercenter.jsp">欢迎${sessionScope.loginId}</a>
+                </c:if>
                 <span>|</span>
                 <a href="register.jsp">注册</a>
             </div>
             <div class="user_link fl">
-                <span>|</span>
-                <a href="">用户中心</a>
-                <span>|</span>
-                <a href="cart.jsp">我的购物车</a>
-                <span>|</span>
-                <a href="">我的订单</a>
+                <c:if test="${sessionScope.loginId != null}">
+                    <span>|</span>
+                    <a href="usercenter.jsp">用户中心</a>
+                    <span>|</span>
+                    <a href="cartLoad?userId=${sessionScope.loginId}">我的购物车</a>
+                    <span>|</span>
+                    <a href="">我的订单</a>
+                </c:if>
             </div>
         </div>
     </div>
@@ -44,63 +55,43 @@
     </div>
 </div>
 
-<div class="total_count">全部商品<em>2</em>件</div>
-<ul class="cart_list_th clearfix">
+<div class="total_count">全部商品<em>${fn:length(requestScope.productCart)}</em>件</div>
+<ul class="cart_list_th priority">
     <li class="col01">商品名称</li>
-    <li class="col02">商品单位</li>
-    <li class="col03">商品价格</li>
-    <li class="col04">数量</li>
-    <li class="col05">小计</li>
-    <li class="col06">操作</li>
-</ul>
-<ul class="cart_list_td priority">
-    <li class="col01"><label>
-        <input type="checkbox" name="" checked>
-    </label></li>
-    <li class="col02"><img src="images/goods/phone02.png" alt="image"></li>
-    <li class="col03">华为P30 Pro<br><em>4988元/部</em></li>
-    <li class="col04">部</li>
-    <li class="col05">4988元</li>
-    <li class="col06">
-        <div class="num_add">
-            <a href="javascript:" class="add fl">+</a>
-            <label>
-                <input type="text" class="num_show fl" value="1">
-            </label>
-            <a href="javascript:" class="minus fl">-</a>
-        </div>
-    </li>
-    <li class="col07">4988元</li>
-    <li class="col08"><a href="javascript:">删除</a></li>
+    <li class="col02">商品单价</li>
+    <li class="col03">数量</li>
+    <li class="col04">小计</li>
+    <li class="col05">操作</li>
 </ul>
 
-<ul class="cart_list_td priority">
-    <li class="col01"><label>
-        <input type="checkbox" name="" checked>
-    </label></li>
-    <li class="col02"><img src="images/goods/phone01.jpg" alt="image"></li>
-    <li class="col03">Redmi Note7 Pro<br><em>1399元/部</em></li>
-    <li class="col04">部</li>
-    <li class="col05">1399元</li>
-    <li class="col06">
-        <div class="num_add">
-            <a href="javascript:" class="add fl">+</a>
-            <label>
-                <input type="text" class="num_show fl" value="1">
-            </label>
-            <a href="javascript:" class="minus fl">-</a>
-        </div>
-    </li>
-    <li class="col07">1399元</li>
-    <li class="col08"><a href="javascript:">删除</a></li>
-</ul>
+<c:forEach var="product" items="${requestScope.productCart}">
+    <ul class="cart_list_td priority">
+        <li class="col01"><label>
+            <input type="checkbox" name="item_box">
+        </label></li>
+        <li class="col02"><img alt="image" src=${product["image"]}></li>
+        <li class="col03">${product["name"]}</li>
+        <li class="col04">￥${product["price"]}</li>
+        <li class="col05">
+            <div class="num_add">
+                <a href="javascript:" class="add fl">+</a>
+                <label>
+                    <input type="text" class="num_show fl" value=${product["number"]}>
+                </label>
+                <a href="javascript:" class="minus fl">-</a>
+            </div>
+        </li>
+        <li class="col06">￥${product["price"]*product["number"]}</li>
+        <li class="col07"><a href="deleteCart?uid=${sessionScope.loginId}&pid=${product["id"]}">删除</a></li>
+    </ul>
+</c:forEach>
 
 <ul class="settlements">
     <li class="col01"><label>
-        <input type="checkbox" name="" checked="checked">
+        <input type="checkbox" name="all_checked">
     </label></li>
     <li class="col02">全选</li>
-    <li class="col03">合计(不含运费)：<span>¥</span><em>6387</em><br>共计<b>2</b>件商品</li>
+    <li class="col03">合计：<span>¥</span><em id="total_price">0</em><br>共计<b id="total_number">0</b>件商品</li>
     <li class="col04"><a href="">去结算</a></li>
 </ul>
 
@@ -115,7 +106,7 @@
         <a href="#">友情链接</a>
     </div>
     <p>CopyRight © 2019 吉首大学CCW</p>
-    <p>电话：0730-****888    湘ICP备*******8号</p>
+    <p>电话：0730-****888 湘ICP备*******8号</p>
 </div>
 
 </body>

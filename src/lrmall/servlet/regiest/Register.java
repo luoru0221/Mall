@@ -2,12 +2,15 @@ package lrmall.servlet.regiest;
 
 import lrmall.bean.User;
 import lrmall.dao.impl.UserDaoImpl;
+import lrmall.utils.Md5;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Random;
 
 /**
@@ -18,13 +21,15 @@ public class Register extends HttpServlet {
     private UserDaoImpl userDao = new UserDaoImpl();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        req.setCharacterEncoding("utf-8");
+        resp.setContentType("text/html;charset=utf-8"); //设置编码格式，避免中文乱码
         String msgCode = req.getParameter("msg_code"); //用户输入的验证码
         String emailCode = null; //从Cookie中取出验证码
 
@@ -39,12 +44,16 @@ public class Register extends HttpServlet {
         if (emailCode != null && emailCode.equals(msgCode)) {
             User newUser = this.getNewUser(req);
             if (userDao.addUser(newUser) > 0) {
-                System.out.println("注册成功");
+                //注册成功，跳转至登录界面
+                req.setAttribute("newUserId",newUser.getId());
+                req.getRequestDispatcher("login.jsp").forward(req,resp);
             } else {
-                System.out.println("注册失败");
+                req.setAttribute("log","注册失败，请稍后重试！");
+                req.getRequestDispatcher("register.jsp").forward(req,resp);
             }
-        }else{
-            System.out.println("验证码输入有误！");
+        } else {
+            req.setAttribute("log","验证码错误");
+            req.getRequestDispatcher("register.jsp").forward(req,resp);
         }
 
     }
@@ -55,7 +64,7 @@ public class Register extends HttpServlet {
      */
     private User getNewUser(HttpServletRequest req) {
         String name = req.getParameter("user_name"); //用户名
-        String password = req.getParameter("pwd");  //密码
+        String password = Md5.toMd5(req.getParameter("pwd"));  //密码
         String email = req.getParameter("email");   //邮箱
         String newId; //新的账号
 

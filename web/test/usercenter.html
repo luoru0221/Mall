@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/usercenter.css">
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/usercenter.js"></script>
+</head>
+<body>
+<div class="header_con">
+    <div class="header">
+        <div class="welcome fl">欢迎来到1号店！</div>
+        <div class="fr">
+            <div class="login_info fl">
+                欢迎您：<em>张 山</em>
+            </div>
+            <div class="login_btn fl">
+                <a href="../login.jsp">登录</a>
+                <span>|</span>
+                <a href="../register.jsp">注册</a>
+            </div>
+            <div class="user_link fl">
+                <span>|</span>
+                <a href="">用户中心</a>
+                <span>|</span>
+                <a href="../cart.jsp">我的购物车</a>
+                <span>|</span>
+                <a href="">我的订单</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="user_header">
+    <div class="wrap">
+        <a href="" class="wrap_logo">
+            <img src="../images/logo04.png" alt="">
+        </a>
+        <div class="wrap_nav fl">
+            <a href="../index.jsp">首页</a>
+            <ul class="nav_list fl">
+                <li class="nav_item checked">个人信息</li>
+                <li class="nav_item">地址管理</li>
+                <li class="nav_item">我的订单</li>
+            </ul>
+        </div>
+        <div class="merchant fr">
+            <ul class="merchant_list">
+                <li class="nav_item">添加商品</li>
+                <li class="nav_item">订单管理</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <!--用户个人信息-->
+    <div class="user_information priority active">
+        <div class="basic_information fl">
+            <div class="information_item">
+                <label for="userId">ID：</label>
+                <label id="userId">12345</label><br>
+            </div>
+            <div class="information_item">
+                <label for="name">用户名：</label>
+                <input type="text" id="name"><br>
+            </div>
+            <div class="information_item">
+                <label for="email">邮箱：</label>
+                <input type="text" id="email"><br>
+            </div>
+            <div class="information_item">
+                <label for="code">验证码：</label>
+                <input type="text" id="code">
+                <button id="get_msg_code">获取验证码</button>
+            </div>
+        </div>
+        <div class="other_information fr">
+            <div class="information_item">
+                <label for="old_password">原始密码：</label>
+                <input type="password" id="old_password" placeholder="需要修改密码时才填写"><br>
+            </div>
+            <div class="information_item">
+                <label for="new_password">新密码：</label>
+                <input type="password" id="new_password" placeholder="需要修改密码时才填写"><br>
+            </div>
+            <div class="information_item">
+                <label for="con_password">确认密码：</label>
+                <input type="password" id="con_password" placeholder="需要修改密码时才填写"><br>
+            </div>
+            <div class="information_item">
+                <button id="submit" class="fr">提交</button>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!--地址管理-->
+    <div class="address_manager priority">
+        <ul class="address">
+            <!--已经存在的地址-->
+        </ul>
+        <div class="add_address"><!--添加新地址-->
+            <a href="">+添加新地址</a>
+        </div>
+        <div class="add_address_operation">
+
+        </div>
+    </div>
+
+    <!--我的订单-->
+    <div class="my_order">
+
+    </div>
+
+    <!--添加商品-->
+    <div class="add_product priority">
+        <div class="add_information fl">
+            <label for="pName">商品名称：</label>
+            <input type="text" id="pName"><br>
+            <label for="pDescription">商品描述：</label>
+            <textarea rows="10" cols="30" id="pDescription"></textarea><br>
+            <label for="pPrice">商品价格：</label>
+            <input type="text" id="pPrice"><br>
+            <label for="pImage">商品图片：</label>
+            <input type="file" id="pImage" accept=".png,.jpg,.jpeg,image/png,image/jpg,image/jpeg" onchange="showImg()"><br>
+            <label for="pType">商品分类：</label>
+            <select name="pType" id="pType">
+                <option>手机数码</option>
+                <option>电脑办公</option>
+                <option>美妆护理</option>
+                <option>家居家装</option>
+                <option>生活电器</option>
+                <option>食品零食</option>
+            </select>
+        </div>
+        <div class="pImageDiv fl">
+            <img src="" id="pImageShow" alt="暂未上传图片">
+        </div>
+        <div class="fr" id="add_tips">
+            <h4>添加规格：</h4>
+            <table id="add_tips_table">
+                <thead>
+                <tr>
+                    <th>规格名称</th>
+                    <th>规格1</th>
+                    <th>规格2</th>
+                    <th>规格3</th>
+                    <th>规格4</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="tip_name"><label>
+                        <input type="text" name="tip_name">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value1">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value2">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value3">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value4">
+                    </label></td>
+                </tr>
+                <tr>
+                    <td class="tip_name"><label>
+                        <input type="text" name="tip_name">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value1">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value2">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value3">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value4">
+                    </label></td>
+                </tr>
+                <tr>
+                    <td class="tip_name"><label>
+                        <input type="text" name="tip_name">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value1">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value2">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value3">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value4">
+                    </label></td>
+                </tr>
+                <tr>
+                    <td class="tip_name"><label>
+                        <input type="text" name="tip_name">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value1">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value2">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value3">
+                    </label></td>
+                    <td class="tip_value"><label>
+                        <input type="text" name="tip_value4">
+                    </label></td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="fr" id="confirmAddBtm" onclick="addProduct()">确认添加</button>
+        </div>
+    </div>
+
+    <div class="orders">
+
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="foot_link">
+        <a href="#">关于我们</a>
+        <span>|</span>
+        <a href="#">联系我们</a>
+        <span>|</span>
+        <a href="#">招聘人才</a>
+        <span>|</span>
+        <a href="#">友情链接</a>
+    </div>
+    <p>CopyRight © 2019 吉首大学CCW</p>
+    <p>电话：0730-****888 湘ICP备*******8号</p>
+</div>
+</body>
+</html>

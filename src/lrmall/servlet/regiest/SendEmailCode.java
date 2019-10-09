@@ -31,8 +31,8 @@ public class SendEmailCode extends HttpServlet {
         String code = getCode();//生成的验证码
 
         SendMail sendMail = new SendMail(address);
-        sendMail.setTitle("【1号店】欢迎注册1号店！");
-        sendMail.setContent("您本次的注册验证码为：" + code + ",十分钟内输入有效。若非本人操作，请忽略");
+        sendMail.setTitle("【1号店】");
+        sendMail.setContent("您本次的验证码为：" + code + ",十分钟内输入有效。若非本人操作，请忽略");
         try {
             //发送验证码
             sendMail.sendMessage();

@@ -2,6 +2,7 @@ package lrmall.servlet.login;
 
 import lrmall.bean.User;
 import lrmall.dao.impl.UserDaoImpl;
+import lrmall.utils.Md5;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +18,7 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         String id = req.getParameter("username");
-        String password = req.getParameter("password");
+        String password = Md5.toMd5(req.getParameter("password"));
 
         //根据用户id查询用户所有信息
         User user = new UserDaoImpl().queryUserById(id);
@@ -27,14 +28,17 @@ public class Login extends HttpServlet {
             String[] keepLogin = req.getParameterValues("keepLogin");
             if (keepLogin != null) {
                 //记住登录
-                HttpSession session = req.getSession();
-                session.setAttribute("user", user);
+                System.out.println("记住登录");
             }
+            HttpSession session = req.getSession();
+            session.setAttribute("loginId", id);
             //重定向到首页
             resp.sendRedirect("index.jsp");
         } else {
             //用户名和账号不匹配，返回到登录界面，并提示用户
+
             req.setAttribute("prompt", "用户名或密码错误，请重新登录！");
+            //请求转发到登录界面
             req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
     }

@@ -1,11 +1,11 @@
 $(function () {
 
-    var error_name = false; //用户名是否错误
-    var error_pwd = false;  //密码是否错误
-    var error_cpwd = false; //确认密码是否错误
-    var error_email = false; //邮箱是否错误
-    var error_mcode = false; //验证码是否错误
-    var error_check = false; //许可协议
+    var error_name = true; //用户名是否错误
+    var error_pwd = true;  //密码是否错误
+    var error_cpwd = true; //确认密码是否错误
+    var error_email = true; //邮箱是否错误
+    var error_mcode = true; //验证码是否错误
+    var error_check = true; //许可协议
 
     //验证用户名
     $('#user_name').blur(function () {
@@ -46,7 +46,7 @@ $(function () {
 
     function checkUserName() {
         var len = $('#user_name').val().length;
-        if (len < 5 || len > 20) {
+        if (len < 1 || len > 20) {
             $('#user_name').next().show();
             error_name = true;
         } else {
@@ -139,7 +139,7 @@ function sendMCode() {
     }
 
     //发送请求，参数分别为：发送方式   发送地址   是否异步传输
-    request.open("POST", "sendEmailCode?address=" + address, true);
+    request.open("GET", "sendEmailCode?address=" + address, true);
     request.send();
 
 }

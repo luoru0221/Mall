@@ -21,8 +21,14 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         try {
             if (resultSet.next()) {
                 String userId = resultSet.getString("id");
+                String name = resultSet.getString("name");
                 String userPwd = resultSet.getString("password");
-                user = new User(userId, userPwd);
+                String email = resultSet.getString("email");
+                user = new User();
+                user.setId(userId);
+                user.setName(name);
+                user.setEmail(email);
+                user.setPassword(userPwd);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -48,12 +54,36 @@ public class UserDaoImpl extends DbUtil implements UserDao {
     }
 
     /**
-     *根据Id删除User
+     * 根据Id删除User
      */
     @Override
-    public int deleteUserById(String id){
+    public int deleteUserById(String id) {
         String sql = "DELETE FROM USERS WHERE id = ?";
-        return this.doUpdate(sql,new Object[]{id});
+        return this.doUpdate(sql, new Object[]{id});
     }
 
+    /**
+     * 修改用户信息的name,email,password
+     */
+    @Override
+    public int updateUser(User user) {
+        try {
+            String sql = "UPDATE users set name=?,email=?,password=? WHERE id=?";
+            Object[] params = {user.getName(),user.getEmail(),user.getPassword(),user.getId()};
+            return this.doUpdate(sql, params);
+        } finally {
+            this.close();
+        }
+    }
+
+    @Override
+    public int updateUserEmail(User user) {
+        try {
+            String sql = "UPDATE users set name=?,email=? WHERE id=?";
+            Object[] params = {user.getName(),user.getEmail(),user.getId()};
+            return this.doUpdate(sql, params);
+        } finally {
+            this.close();
+        }
+    }
 }

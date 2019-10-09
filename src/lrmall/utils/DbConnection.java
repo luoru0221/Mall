@@ -4,16 +4,14 @@ import com.alibaba.druid.pool.DruidDataSourceFactory;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Objects;
 import java.util.Properties;
 
 /**
  * 数据库连接工具
  */
-public class DbConnection {
+class DbConnection {
 
     //数据库连接池对象
     private static DataSource dataSource;
@@ -33,7 +31,7 @@ public class DbConnection {
     /**
      * 获得数据库的连接
      */
-    public static Connection getConnection() throws SQLException {
+    static Connection getConnection() throws SQLException {
         return dataSource.getConnection();
     }
 

@@ -53,3 +53,20 @@ img {
 .fr {
     float: right
 }
+
+button {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+input {
+    -web-kit-appearance: none;
+    -moz-appearance: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

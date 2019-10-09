@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/login.js" type="text/javascript"></script>
 </head>
 
 
@@ -30,8 +32,9 @@
             <div class="form_con">
                 <div class="form_input cur">
                     <form action="login" method="post">
-                        <label>
-                            <input class="name_input" name="username" placeholder="请输入用户名" type="text">
+                        <label id="userId" userid=${requestScope.newUserId}>
+                            <input class="name_input" name="username" placeholder="请输入用户名" type="text"
+                                   value="">
                         </label>
                         <div class="user_error"></div>
                         <label>
@@ -43,7 +46,7 @@
                                 <input type="checkbox" name="keepLogin">
                             </label>
                             <label>记住登录</label>
-                            <a href="find_password.html">忘记密码</a>
+                            <a href="">忘记密码</a>
                         </div>
                         <input type="submit" name="" value="登 录" class="input_submit">
                     </form>
