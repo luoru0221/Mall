@@ -9,10 +9,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ *  @author: Luoru
+ *  @Date: 2019/10/10 15:04
+ *  @Description: ProductDao实现类
+ */
 public class ProductDaoImpl extends DbUtil implements ProductDao {
 
     /**
-     * 根据ID查询商品全部信息
+     * @time 2019年10月10日15:20:28
+     * @param id 商品id
+     * @return product 根据id查询到的Product对象
      */
     @Override
     public Product queryProductById(int id) {
@@ -22,12 +29,8 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
         try {
             ResultSet resultSet = this.doQuery(sql, params);
             while (resultSet.next()) {
-                String name = resultSet.getString("name");
-                String description = resultSet.getString("description");
-                double price = resultSet.getDouble("price");
-                String image = resultSet.getString("image");
-                int type = resultSet.getInt("type");
-                product = new Product(id, name, description, price, image, type);
+                product = new Product();
+                setProduct(resultSet,product);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -38,8 +41,9 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
     }
 
     /**
-     * 添加商品
-     * 添加商品的name,description,price,image
+     * @time 2019年10月10日15:22:21
+     * @param product 需要添加的Product对象
+     * @return 添加操作影响的数据项数
      */
     @Override
     public int addProduct(Product product) {
@@ -53,10 +57,6 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
         }
     }
 
-    /**
-     * 根据商品Id查询商品的所有规格
-     * 返回商品规格的Map
-     */
     @Override
     public HashMap<String, ArrayList<String>> queryNorm(int id) {
         HashMap<String, ArrayList<String>> stringMap = new HashMap<>();
@@ -84,7 +84,9 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
     }
 
     /**
-     * 根据商品类别查询商品
+     * @time 2019年10月10日15:29:08
+     * @param type Product对象的商品类别type属性
+     * @return 根据type查询到的所有Product的ArrayList集合
      */
     @Override
     public ArrayList<Product> queryProductByType(int type) {
@@ -116,6 +118,71 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
         String sql = "INSERT INTO NORM(pid,aName,aValue) VALUES ((SELECT MAX(id) FROM product),?,?)";
         this.doUpdate(sql, new Object[]{tipName, tip});
         this.close();
+    }
+
+    /**
+     * @time 2019年10月10日15:26:45
+     * @param storeId 店铺的id
+     * @return 所有属于该店铺的Product对象的ArrayList集合
+     */
+    @Override
+    public ArrayList<Product> queryProductByStore(int storeId) {
+        ArrayList<Product> products = new ArrayList<>();
+        Product product;
+        String sql = "SELECT * FROM PRODUCT WHERE store = ?";
+        try {
+            ResultSet resultSet = this.doQuery(sql, new Object[]{storeId});
+            while(resultSet.next()){
+                product = new Product();
+                setProduct(resultSet,product);
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return products;
+    }
+
+    /**
+     * @time 2019年10月10日15:27:12
+     * @return 数据库中所有的Product对象的ArrayList集合
+     */
+    @Override
+    public ArrayList<Product> queryAllProducts() {
+        ArrayList<Product> products = new ArrayList<>();
+        Product product;
+         String sql = "SELECT * FROM PRODUCT";
+        try {
+            ResultSet resultSet = this.doQuery(sql, null);
+            while(resultSet.next()){
+                product = new Product();
+                setProduct(resultSet,product);
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return products;
+    }
+
+    /**
+     * @time 2019年10月10日15:28:21
+     * @param resultSet 数据库查询到的所有商品信息的结果集
+     * @param product 需要初始化的product对象
+     */
+    private void setProduct(ResultSet resultSet,Product product) throws SQLException {
+        product.setId(resultSet.getInt("id"));
+        product.setName(resultSet.getString("name"));
+        product.setNumber(resultSet.getInt("stock"));
+        product.setImage(resultSet.getString("image"));
+        product.setType(resultSet.getInt("type"));
+        product.setDescription(resultSet.getString("description"));
+        product.setPrice(resultSet.getDouble("price"));
+        product.setStore(resultSet.getInt("store"));
     }
 
 }

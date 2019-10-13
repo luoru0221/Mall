@@ -22,7 +22,7 @@ public class UserCenter extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        String loginId = req.getParameter("loginId");
+        String loginId = (String)req.getSession().getAttribute("loginId");
         User user = userDao.queryUserById(loginId);
         String userString = JSONObject.toJSONString(user);
         try {

@@ -25,7 +25,7 @@ public class JudgePwd extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String userId = req.getParameter("userId");
+        String userId = (String)req.getSession().getAttribute("loginId");
         String oldPwd = Md5.toMd5(req.getParameter("oldPwd"));
         System.out.println(oldPwd);
         User user = userDao.queryUserById(userId);

@@ -1,7 +1,9 @@
 package lrmall.servlet.cart;
 
 import lrmall.bean.Product;
+import lrmall.bean.User;
 import lrmall.dao.impl.CartDaoImpl;
+import lrmall.dao.impl.UserDaoImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +22,7 @@ public class CartLoad extends HttpServlet {
         String userId = req.getParameter("userId");
         ArrayList<Product> productCart = cartDao.selectCartByUserId(userId);
         req.setAttribute("productCart", productCart);
-        req.getRequestDispatcher("cart.jsp").forward(req,resp);//请求转发到购物车
+        req.getRequestDispatcher("cart.jsp").forward(req, resp);//请求转发到购物车
     }
 
     @Override

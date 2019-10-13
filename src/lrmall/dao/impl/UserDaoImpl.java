@@ -6,6 +6,7 @@ import lrmall.utils.DbUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class UserDaoImpl extends DbUtil implements UserDao {
 
@@ -20,15 +21,8 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         ResultSet resultSet = this.doQuery(sql, new Object[]{id});
         try {
             if (resultSet.next()) {
-                String userId = resultSet.getString("id");
-                String name = resultSet.getString("name");
-                String userPwd = resultSet.getString("password");
-                String email = resultSet.getString("email");
                 user = new User();
-                user.setId(userId);
-                user.setName(name);
-                user.setEmail(email);
-                user.setPassword(userPwd);
+                setUser(resultSet,user);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -63,27 +57,74 @@ public class UserDaoImpl extends DbUtil implements UserDao {
     }
 
     /**
-     * 修改用户信息的name,email,password
+     * @param user User对象,包含id和password
+     * @return 影响的数据条数
+     * @time 2019年10月12日14:32:30
      */
     @Override
-    public int updateUser(User user) {
+    public int updateUserPwd(User user) {
         try {
-            String sql = "UPDATE users set name=?,email=?,password=? WHERE id=?";
-            Object[] params = {user.getName(),user.getEmail(),user.getPassword(),user.getId()};
+            String sql = "UPDATE users set password=? WHERE id=?";
+            Object[] params = {user.getPassword(), user.getId()};
             return this.doUpdate(sql, params);
         } finally {
             this.close();
         }
     }
 
+    /**
+     * 修改收件人的姓名和收货地址
+     *
+     * @param user User对象，包含用户的账号、收件人姓名和地址
+     * @return 影响的数据条数
+     */
     @Override
-    public int updateUserEmail(User user) {
+    public int updateUserAddress(User user) {
         try {
-            String sql = "UPDATE users set name=?,email=? WHERE id=?";
-            Object[] params = {user.getName(),user.getEmail(),user.getId()};
+            String sql = "UPDATE users SET recname = ?,address = ? WHERE id = ?";
+            Object[] params = {user.getRecName(), user.getAddress(), user.getId()};
             return this.doUpdate(sql, params);
         } finally {
             this.close();
         }
+    }
+
+    /**
+     * @return 除后台管理员之外的所有User对象的ArrayList集合
+     * @time 2019年10月10日20:20:11
+     */
+    @Override
+    public ArrayList<User> queryAllUsers() {
+        ArrayList<User> users = new ArrayList<>();
+        User user;
+        String sql = "SELECT * FROM USERS WHERE type <> 0";
+        try {
+            ResultSet resultSet = this.doQuery(sql, null);
+            while (resultSet.next()) {
+                user = new User();
+                setUser(resultSet, user);
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return users;
+    }
+
+    /**
+     * @param resultSet 数据库返回的所有User对象的结果集
+     * @param user      需设置属性值的User对象
+     * @time 2019年10月10日20:36:33
+     */
+    private void setUser(ResultSet resultSet, User user) throws SQLException {
+        user.setId(resultSet.getString("id"));
+        user.setName(resultSet.getString("name"));
+        user.setPassword(resultSet.getString("password"));
+        user.setEmail(resultSet.getString("email"));
+        user.setAddress(resultSet.getString("address"));
+        user.setType(resultSet.getInt("type"));
+        user.setRecName(resultSet.getString("recname"));
     }
 }

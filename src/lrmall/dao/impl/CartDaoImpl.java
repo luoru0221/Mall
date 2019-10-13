@@ -116,4 +116,59 @@ public class CartDaoImpl extends DbUtil implements CartDao {
             this.close();
         }
     }
+
+    /**
+     * 更新购物车表信息
+     * @param cart 新的购物车对象
+     * @return 影响的数据条数
+     */
+    @Override
+    public int updateCart(Cart cart) {
+        String sql = "UPDATE cart SET number=?,type=? WHERE uid=? AND pid=?";
+        Object[] params = {cart.getNumber(),cart.getType(),cart.getUid(),cart.getPid()};
+        try{
+            return this.doUpdate(sql,params);
+        }finally {
+            this.close();
+        }
+    }
+
+    @Override
+    public ArrayList<Product> selectToOrderCart(String uid) {
+        String sql = "SELECT product.id,product.image,product.name,cart.number,product.price FROM CART , PRODUCT WHERE cart.uid = ? AND product.id = cart.pid AND cart.type = 1";
+        ResultSet resultSet = this.doQuery(sql, new Object[]{uid});
+        Product product;
+        ArrayList<Product> productCart = new ArrayList<>();
+        try {
+            while (resultSet.next()) {
+                int pid = resultSet.getInt("product.id");
+                String image = resultSet.getString("product.image");//商品图片
+                String name = resultSet.getString("product.name"); //商品名称
+                int number = resultSet.getInt("cart.number");  //商品数量
+                double price = resultSet.getDouble("product.price");  //商品单价
+                product = new Product();
+                product.setId(pid);
+                product.setImage(image);
+                product.setName(name);
+                product.setPrice(price);
+                product.setNumber(number);
+                productCart.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return productCart;
+    }
+
+    @Override
+    public void refreshCart(String uid) {
+        String sql = "UPDATE CART SET type=0 WHERE uid=? and type=1";
+        try {
+            this.doUpdate(sql, new Object[]{uid});
+        } finally {
+            this.close();
+        }
+    }
 }

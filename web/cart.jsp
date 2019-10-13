@@ -37,7 +37,7 @@
                     <span>|</span>
                     <a href="cartLoad?userId=${sessionScope.loginId}">我的购物车</a>
                     <span>|</span>
-                    <a href="">我的订单</a>
+                    <a href="orderList">我的订单</a>
                 </c:if>
             </div>
         </div>
@@ -75,14 +75,14 @@
         <li class="col05">
             <div class="num_add">
                 <a href="javascript:" class="add fl">+</a>
-                <label>
+                <label class="pId" productId=${product["id"]}>
                     <input type="text" class="num_show fl" value=${product["number"]}>
                 </label>
                 <a href="javascript:" class="minus fl">-</a>
             </div>
         </li>
         <li class="col06">￥${product["price"]*product["number"]}</li>
-        <li class="col07"><a href="deleteCart?uid=${sessionScope.loginId}&pid=${product["id"]}">删除</a></li>
+        <li class="col07"><a href="javascript:" id="delate" productId=${product["id"]}>删除</a></li>
     </ul>
 </c:forEach>
 
@@ -92,7 +92,7 @@
     </label></li>
     <li class="col02">全选</li>
     <li class="col03">合计：<span>¥</span><em id="total_price">0</em><br>共计<b id="total_number">0</b>件商品</li>
-    <li class="col04"><a href="">去结算</a></li>
+    <li class="col04"><a href="javascript:" id="submit">去结算</a></li>
 </ul>
 
 <div class="footer">

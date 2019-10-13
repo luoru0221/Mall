@@ -7,6 +7,15 @@ public class Cart {
     private String uid;//用户id
     private int pid;//商品id
     private int number;//商品数量
+    private int type;  //状态
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public String getUid() {
         return uid;

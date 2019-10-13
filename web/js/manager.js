@@ -90,3 +90,19 @@ function addProduct() {
 function showImg() {
     $("#pImageShow").attr("src", URL.createObjectURL($("#pImage")[0].files[0]));
 }
+$(function () {
+    var $operation = $(".operation");
+    $operation.click(function () {
+        var $operation_div = $(this).parents("ul").next();
+        $operation_div.toggle(function () {
+            $operation_div.addClass("con_active");
+            $operation_div.removeClass("con_active");
+        })
+    });
+
+});
+
+/*选择图片后预览*/
+function showImage() {
+    $("#p_img_show").attr("src", URL.createObjectURL($("#p_image")[0].files[0]));
+}

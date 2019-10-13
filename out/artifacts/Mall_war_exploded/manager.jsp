@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,20 +14,10 @@
 <body>
 <div class="header_con">
     <div class="header">
-        <div class="welcome fl">欢迎来到1号店！</div>
+        <div class="welcome fl">1号店管理员后台</div>
         <div class="fr">
-            <div class="login_btn fl">
-                <a href="login.jsp">登录</a>
-                <span>|</span>
-                <a href="register.jsp">注册</a>
-            </div>
             <div class="user_link fl">
-                <span>|</span>
-                <a href="usercenter.jsp">用户中心</a>
-                <span>|</span>
-                <a href="cartLoad?userId=${sessionScope.loginId}">我的购物车</a>
-                <span>|</span>
-                <a href="">我的订单</a>
+                <a href="exitLogin">退出管理系统</a>
             </div>
         </div>
     </div>
@@ -46,6 +37,7 @@
             <li><a href="javascript:" class="menu_a">用户管理</a></li>
             <li><a href="javascript:" class="menu_a">商品管理</a></li>
             <li><a href="javascript:" class="menu_a">添加商品</a></li>
+            <li><a href="javascript:" class="menu_a">分类管理</a></li>
         </ul>
     </div>
 
@@ -64,8 +56,11 @@
                 <li class="order_price fl">￥3366.00</li>
                 <li class="order_number fl">1</li>
                 <li class="order_total_price fl">￥3366.00</li>
-                <li class="order_operation fr"><a href="javascript:">发货</a></li>
+                <li class="order_operation fr"><a class="operation" href="javascript:">发货</a></li>
             </ul>
+        </div>
+        <div class="operation_con">
+
         </div>
     </div>
 
@@ -79,12 +74,14 @@
                 <li class="user_email">Email</li>
                 <li class="user_operation">操作</li>
             </ul>
-            <ul class="user_list_td priority">
-                <li class="user_id_show">12345</li>
-                <li class="user_name_show">luoru</li>
-                <li class="user_email_show">331980169@qq.com</li>
-                <li class="user_operation_show"><a href="javascript:">删除</a></li>
-            </ul>
+            <c:forEach var="user" items="${requestScope.users}">
+                <ul class="user_list_td priority">
+                    <li class="user_id_show">${user['id']}</li>
+                    <li class="user_name_show">${user['name']}</li>
+                    <li class="user_email_show">${user['email']}</li>
+                    <li class="user_operation_show"><a class="operation" href="javascript:">删除</a></li>
+                </ul>
+            </c:forEach>
         </div>
     </div>
     <!--    商品管理页-->
@@ -97,12 +94,35 @@
                 <li class="product_price">单价</li>
                 <li class="product_operation">操作</li>
             </ul>
-            <ul class="product_list_td priority">
-                <li class="product_id_show">商品ID</li>
-                <li class="product_name_show">名称</li>
-                <li class="product_price_show">单价</li>
-                <li class="product_operation_show"><a href="javascript:">编辑</a></li>
-            </ul>
+            <c:forEach var="product" items="${requestScope.products}">
+                <ul class="product_list_td priority">
+                    <li class="product_id_show">${product['id']}</li>
+                    <li class="product_name_show">${product['name']}</li>
+                    <li class="product_price_show">${product['price']}</li>
+                    <li class="product_operation_show"><a class="operation" href="javascript:">编辑</a></li>
+                </ul>
+                <div class="operation_con priority">
+                    <div class="product_information fl">
+                        <div class="con_input"><label for="p_id">ID：</label><input type="text" id="p_id" value="123"
+                                                                                   readonly='true'></div>
+                        <div class="con_input"><label for="p_name">名称：</label><input type="text" id="p_name"></div>
+                        <div class="con_area"><label for="p_description">详情：</label><textarea id="p_description"></textarea>
+                        </div>
+                        <div class="con_input"><label for="p_price">单价：</label><input type="text" id="p_price"></div>
+                        <div class="con_input"><label for="p_stock">库存：</label><input type="text" id="p_stock"></div>
+                        <div class="con_btn priority">
+                            <button class="fl">保存修改</button>
+                            <button class="fr">删除商品</button>
+                        </div>
+                    </div>
+                    <div class="product_img fr">
+                        <div class="p_image"><label>上传商品图片</label><input type="file" id="p_image"
+                                                                         accept=".png,.jpg,.jpeg,image/png,image/jpg,image/jpeg"
+                                                                         onchange="showImage()"></div>
+                        <img src="" id="p_img_show" alt="暂未上传图片">
+                    </div>
+                </div>
+            </c:forEach>
         </div>
     </div>
     <!--    添加商品-->
@@ -131,121 +151,6 @@
             <img src="" id="pImageShow" alt="暂未上传图片">
         </div>
         <div class="fl priority" id="add_tips">
-            <h4>添加规格：</h4>
-            <table id="add_tips_table">
-                <thead>
-                <tr>
-                    <th>规格名称</th>
-                    <th>规格1</th>
-                    <th>规格2</th>
-                    <th>规格3</th>
-                    <th>规格4</th>
-                    <th>规格5</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="tip_name"><label>
-                        <input type="text" name="tip_name">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value1">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value2">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value3">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value4">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value5">
-                    </label></td>
-                </tr>
-                <tr>
-                    <td class="tip_name"><label>
-                        <input type="text" name="tip_name">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value1">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value2">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value3">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value4">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value5">
-                    </label></td>
-                </tr>
-                <tr>
-                    <td class="tip_name"><label>
-                        <input type="text" name="tip_name">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value1">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value2">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value3">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value4">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value5">
-                    </label></td>
-                </tr>
-                <tr>
-                    <td class="tip_name"><label>
-                        <input type="text" name="tip_name">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value1">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value2">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value3">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value4">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value5">
-                    </label></td>
-                </tr>
-                <tr>
-                    <td class="tip_name"><label>
-                        <input type="text" name="tip_name">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value1">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value2">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value3">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value4">
-                    </label></td>
-                    <td class="tip_value"><label>
-                        <input type="text" name="tip_value5">
-                    </label></td>
-                </tr>
-                </tbody>
-            </table>
             <button class="fr" onclick="addProduct()">确认添加</button>
         </div>
     </div>

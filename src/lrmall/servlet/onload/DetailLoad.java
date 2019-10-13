@@ -19,9 +19,7 @@ public class DetailLoad extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("productId"));
-        HashMap<String, ArrayList<String>> norms = productDao.queryNorm(id);
         Product product = productDao.queryProductById(id);
-        req.setAttribute("norms", norms);
         req.setAttribute("product",product);
         //请求转发到商品详情页
         req.getRequestDispatcher("detail.jsp?productId="+id).forward(req, resp);

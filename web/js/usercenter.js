@@ -8,160 +8,131 @@ $(function () {
     });
 });
 $(function () {
-    var userId = $("#userId").text();
-    var $name = $("#name");
-    var $email = $("#email");
     //填充数据
     $.ajax({
         url: "userCenter",
         dataType: "json",
         type: "POST",
-        data: {loginId: userId},
         success: function (user) {
-            $name.val(user['name']);
-            $email.val(user['email']);
+            //请求到user对象
+            $("#uId").text(user["id"]);
+            $("#uName").text(user["name"]);
+            $("#uEmail").text(user["email"]);
+            $("#recName").text(user["recName"]);
+            $("#uAddress").text(user["address"]);
+            $("#recipient").val(user["recName"]);
+            $("#address").text(user["address"]);
         }
     })
 });
+/**
+ * 修改密码
+ */
 $(function () {
-    var emailTrue = true;  //邮箱地址是否正确
-    var emailCodeTrue = false;  //邮箱验证码是否正确
     var pwdTrue = false;  //原始密码是否正确
-    var $email = $("#email");  //邮箱输入框
-    var $code = $("#code");  //验证码输入框
-    var $getCode = $("#get_msg_code");  //获取验证码按钮
-    var $submit = $("#submit");  //提交按钮
-    var $oldPwd = $("#old_password"); //原始密码框
-    var $newPwd = $("#new_password");  //新密码框
-    var $conPwd = $("#con_password");  //确认密码框
+    var newPwdTrue = false;  //新密码是否合法
+    var conPwdTrue = false;  //确认密码是否正确
 
-    var userId = $("#userId").text();
-    var userName = $("#name").val();
-    var email = $email.val();
-    var code = $code.val();
-    var oldPwd = $oldPwd.val(); //原始密码
-    var newPwd = $newPwd.val(); //新密码
-    var conPwd = $conPwd.val(); //确认密码
+    var $oldPwd = $("#old_pwd"); //原始密码框
+    var $newPwd = $("#new_pwd");  //新密码框
+    var $conPwd = $("#con_pwd");  //确认密码框
+    var $saveEdit = $("#saveEdit"); //确认修改密码
 
-
-    //正则判断邮箱是否合法
-    $email.change(function () {
-        var reg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
-        emailTrue = reg.test($(this).val());
-    });
-
-    //获取验证码
-    $getCode.click(function () {
-        email = $email.val();
-        if (!emailTrue) {
-            alert("请输入正确的邮箱地址！");
-        } else {
-            $.ajax({
-                url: "sendEmailCode",
-                dataType: "json",
-                type: "POST",
-                data: {address: email}
-            });
-
-            $getCode.attr("disabled", true); //使按钮失效
-            $getCode.css("background-color", "#eadcc0"); //改变按钮颜色
-            var count = 60;
-            countTimes();
-
-            function countTimes() {
-                $getCode.html("重新发送(" + count + "s)");
-                count--;
-                if (count > 0) {
-                    setTimeout(countTimes, 1000);
-                } else if (count === 0) {
-                    $getCode.html("获取验证码");
-                    $getCode.attr("disabled", false); //重新激活按钮
-                    $getCode.css("background-color", "#ff0000");
-                }
-            }
-        }
-    });
-
-    //判断验证码是否正确
-    $code.change(function () {
-        code = $code.val();
-        $.ajax({
-            url: "judgeCode",
-            type: "POST",
-            dataType: "json",
-            data: {
-                emailCode: code
-            },
-            success: function (isTrue) {
-                emailCodeTrue = isTrue;
-            }
-        })
-    });
 
     //判断原始密码是否正确
-    $oldPwd.change(function () {
-        userId = $("#userId").text();
-        oldPwd = $oldPwd.val();
+    $oldPwd.blur(function () {
         $.ajax({
             url: "judgePwd",
+            async: false,
             type: "POST",
             dataType: "json",
             data: {
-                userId: userId,
-                oldPwd: oldPwd
+                oldPwd: $(this).val()
             },
             success: function (isTrue) {
                 pwdTrue = isTrue;
             }
-        })
+        });
+        if (!pwdTrue) {
+            $(this).siblings("span").show();
+        } else {
+            $(this).siblings("span").hide();
+        }
     });
+    $newPwd.blur(function () {
+        if ($(this).val().length >= 8 && $(this).val().length <= 20) {
+            newPwdTrue = true;
+            $(this).siblings("span").hide();
+        } else {
+            newPwdTrue = false;
+            $(this).siblings("span").show()
+        }
 
-    //异步提交
-    $submit.click(function () {
-        userName = $("#name").val();
-        email = $email.val();
-        newPwd = $newPwd.val();
-        conPwd = $conPwd.val();
-        if (newPwd !== conPwd) {
-            alert("两次输入的密码不一致！");
-        } else if (!emailCodeTrue) {
-            alert("验证码错误！")
-        } else if (!pwdTrue) {
-            alert("原始密码错误");
-        } else if (newPwd === "") {
-            //不修改密码
-            userId = $("#userId").text();
-            alert("修改成功");
+    });
+    $conPwd.blur(function () {
+        if ($(this).val() === $newPwd.val()) {
+            conPwdTrue = true;
+            $(this).siblings("span").hide();
+        } else {
+            conPwdTrue = false;
+            $(this).siblings("span").show();
+        }
+    });
+    $saveEdit.click(function () {
+        if (pwdTrue && newPwdTrue && conPwdTrue) {
             $.ajax({
-                url: "updateUser",
+                url: "updatePwd",
                 type: "POST",
                 dataType: "json",
-                data: {
-                    id: userId,
-                    name: userName,
-                    email: email
+                data: {"password": $newPwd.val()},
+                success: function (success) {
+                    if (success) {
+                        $oldPwd.val("");
+                        $newPwd.val("");
+                        $conPwd.val("");
+                        alert("修改成功");
+                    } else {
+                        alert("系统异常，请稍后重试！");
+                    }
                 }
             })
-        } else if (newPwd !== "") {
-            if (newPwd.length < 8 || newPwd.length > 20) {
-                alert("密码必须为8-20位之间！");
-            } else {
-                //修改密码
-                userId = $("#userId").text();
-                alert("修改成功！");
-                $.ajax({
-                    url: "updateUser",
-                    type: "POST",
-                    dataType: "json",
-                    data: {
-                        id: userId,
-                        name: userName,
-                        email: email,
-                        password: newPwd
-                    }
-                })
-            }
+        } else {
+            alert("请规范输入");
         }
     })
+});
+
+$(function () {
+    var $recipient = $("#recipient");
+    var $address = $("#address");
+
+    var recipient;
+    var address;
+
+    var $saveAddress = $("#saveAddress");
+    $saveAddress.click(function () {
+        recipient = $recipient.val();
+        address = $address.val();
+        if(recipient.length===0){
+            alert("收件人姓名不能为空");
+        }else{
+            $.ajax({
+                url:"updateAddress",
+                type:"POST",
+                dataType:"json",
+                data:{
+                    "recName":recipient,
+                    "address":address
+                },
+                success:function (success) {
+                    if(success){
+                        alert("保存成功！");
+                    }else{
+                        alert("系统异常！请稍后重试");
+                    }
+                }
+            })
+        }
+    });
 });
 

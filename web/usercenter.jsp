@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +33,7 @@
                     <span>|</span>
                     <a href="cartLoad?userId=${sessionScope.loginId}">我的购物车</a>
                     <span>|</span>
-                    <a href="">我的订单</a>
+                    <a href="orderList">我的订单</a>
                 </c:if>
             </div>
         </div>
@@ -51,8 +51,8 @@
         <h3>个人中心</h3>
         <ul id="menu">
             <li class="nav_item active">个人信息</li>
-            <li class="nav_item">地址管理</li>
-            <li class="nav_item">我的订单</li>
+            <li class="nav_item">收货地址</li>
+            <li class="nav_item">修改密码</li>
         </ul>
     </div>
 
@@ -60,63 +60,56 @@
         <!--用户个人信息-->
         <div class="content user_information priority con_active">
             <h3 class="content_title">个人信息</h3>
-            <div class="basic_information fl">
-                <div class="information_item">
-                    <label for="userId">ID：</label>
-                    <label id="userId">${sessionScope.loginId}</label><br>
-                </div>
-                <div class="information_item">
-                    <label for="name">用户名：</label>
-                    <input type="text" id="name"><br>
-                </div>
-                <div class="information_item">
-                    <label for="email">邮箱：</label>
-                    <input type="text" id="email"><br>
-                </div>
-                <div class="information_item">
-                    <label for="code">验证码：</label>
-                    <input type="text" id="code">
-                    <button id="get_msg_code">获取验证码</button>
-                </div>
-            </div>
-            <div class="other_information fr">
-                <div class="information_item">
-                    <label for="old_password">原始密码：</label>
-                    <input type="password" id="old_password" placeholder="若需修改信息，请填写密码"><br>
-                </div>
-                <div class="information_item">
-                    <label for="new_password">新密码：</label>
-                    <input type="password" id="new_password" placeholder="需要修改密码时才填写"><br>
-                </div>
-                <div class="information_item">
-                    <label for="con_password">确认密码：</label>
-                    <input type="password" id="con_password" placeholder="需要修改密码时才填写"><br>
-                </div>
-                <div class="information_item">
-                    <button id="submit" class="fr">提交</button>
-                    <br>
-                </div>
-            </div>
-        </div>
-
-        <!--地址管理-->
-        <div class="content address_manager priority">
-            <h3 class="content_title">地址管理</h3>
-            <ul class="address">
-                <!--已经存在的地址-->
+            <ul class="inf_con">
+                <li><label>ID:</label><b id="uId"></b></li>
+                <li><label>用户名:</label><b id="uName"></b></li>
+                <li><label>email:</label><b id="uEmail"></b></li>
+                <li><label>收件人姓名:</label><b id="recName"></b></li>
+                <li><label>收货地址:</label><b id="uAddress"></b></li>
             </ul>
-            <div class="add_address"><!--添加新地址-->
-                <a href="">+添加新地址</a>
-            </div>
-            <div class="add_address_operation">
+        </div>
 
+        <!--收货地址-->
+        <div class="content priority">
+            <h3 class="content_title">收货地址</h3>
+            <div class="address_con">
+                <div style="width: 505px;margin: 10px auto" class="priority">
+                    <label for="recipient" class="fl">收件人姓名：</label>
+                    <div class="recipient fr">
+                        <input id="recipient" type="text" value="">
+                    </div>
+                    <label for="address" class="fl">详细地址：</label>
+                    <div class="address fr">
+                        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                    </div>
+                    <button id="saveAddress">保存</button>
+                </div>
             </div>
         </div>
 
-        <!--我的订单-->
-        <div class="content my_order priority">
-            <h3 class="content_title">我的订单</h3>
-
+        <%--修改密码--%>
+        <div class="content priority">
+            <h3 class="content_title">修改密码</h3>
+            <div class="edit_con">
+                <ul class="edit_ul">
+                    <li>
+                        <label for="old_pwd">原密码：</label>
+                        <input type="password" id="old_pwd" placeholder="请输入原密码">
+                        <span class="error_tip">密码错误</span>
+                    </li>
+                    <li>
+                        <label for="new_pwd">新密码：</label>
+                        <input type="password" id="new_pwd" placeholder="请输入8-20位字母及数字的密码">
+                        <span class="error_tip">密码最少8位，最多20位</span>
+                    </li>
+                    <li>
+                        <label for="con_pwd">确认密码：</label>
+                        <input type="password" id="con_pwd" placeholder="请再次确认密码">
+                        <span class="error_tip">两次输入的密码不一致</span>
+                    </li>
+                </ul>
+                <button id="saveEdit">确认修改</button>
+            </div>
         </div>
     </div>
 </div>

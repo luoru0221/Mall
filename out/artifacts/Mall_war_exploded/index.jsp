@@ -20,16 +20,24 @@
 <div class="header_con">
     <div class="header">
         <div class="welcome fl">欢迎来到1号店！</div>
+        <c:if test="${sessionScope.userType == '1'}">
+            <div class="welcome fl"><a href="login.jsp">我的店铺</a></div>
+        </c:if>
+        <c:if test="${sessionScope.userType == '2'}">
+            <div class="welcome fl"><a href="login.jsp">免费申请开店</a></div>
+        </c:if>
         <div class="fr">
             <div class="login_btn fl">
                 <c:if test="${sessionScope.loginId == null}">
                     <a href="login.jsp">登录</a>
+                    <span>|</span>
+                    <a href="register.jsp">注册</a>
                 </c:if>
                 <c:if test="${sessionScope.loginId != null}">
                     <a href="usercenter.jsp">欢迎${sessionScope.loginId}</a>
+                    <span>|</span>
+                    <a href="exitLogin">退出登录</a>
                 </c:if>
-                <span>|</span>
-                <a href="register.jsp">注册</a>
             </div>
             <div class="user_link fl">
                 <c:if test="${sessionScope.loginId != null}">
@@ -38,7 +46,7 @@
                     <span>|</span>
                     <a href="cartLoad?userId=${sessionScope.loginId}">我的购物车</a>
                     <span>|</span>
-                    <a href="">我的订单</a>
+                    <a href="orderList">我的订单</a>
                 </c:if>
             </div>
         </div>
@@ -66,6 +74,10 @@
     </div>
 </div>
 <div class="pos_center_con priority">
+    <div class="img_bk">
+        <img src="images/slide01.jpg" alt="background">
+    </div>
+
     <ul class="sub_menu">
         <li>
             <div class="level1">
@@ -88,7 +100,44 @@
                 </div>
             </div>
         </li>
+        <li>
+            <div class="level1">
+                <a href="#">电脑</a>
+                <a href="#">办公</a>
+            </div>
+            <div class="level2">
+                <div class="list_group">
+                    <div class="group_name fl">电脑 &gt;</div>
+                    <div class="group_detail fl">
+                        <a href="#">曲面电视</a>
+                        <a href="#">超薄电视</a>
+                        <a href="#">HDR电视</a>
+                        <a href="#">OLED电视</a>
+                        <a href="#">4K超清电视</a>
+                        <a href="#">人工智能电视</a>
+                        <a href="#">55英寸</a>
+                        <a href="#">65英寸</a>
+                    </div>
+                </div>
+            </div>
+        </li>
     </ul>
+
+    <div class="news">
+        <div class="news_title">
+            <h3>快讯</h3>
+            <a href="#">更多 &gt;</a>
+        </div>
+        <ul class="news_list">
+            <li><a href="#">i7顽石低至4199元</a></li>
+            <li><a href="#">奥克斯专场 正1匹空调1313元抢</a></li>
+            <li><a href="#">荣耀9青春版 高配 领券立减220元</a></li>
+            <li><a href="#">美多探索公益新模式</a></li>
+            <li><a href="#">i7顽石低至4199元</a></li>
+            <li><a href="#">正1匹空调1313元抢</a></li>
+            <li><a href="#">奥克斯专场 正1匹空调1313元抢</a></li>
+        </ul>
+    </div>
 </div>
 
 <div class="list_model">

@@ -42,10 +42,6 @@
                         </label>
                         <div class="pwd_error"></div>
                         <div class="more_input priority">
-                            <label>
-                                <input type="checkbox" name="keepLogin">
-                            </label>
-                            <label>记住登录</label>
                             <a href="">忘记密码</a>
                         </div>
                         <input type="submit" name="" value="登 录" class="input_submit">

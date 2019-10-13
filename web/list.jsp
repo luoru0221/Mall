@@ -35,7 +35,7 @@
                     <span>|</span>
                     <a href="cartLoad?userId=${sessionScope.loginId}">我的购物车</a>
                     <span>|</span>
-                    <a href="">我的订单</a>
+                    <a href="orderList">我的订单</a>
                 </c:if>
             </div>
         </div>

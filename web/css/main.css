@@ -25,6 +25,10 @@ body{
 /*导航栏链接*/
 .welcome, .login_info, .login_btn, .user_link {
     line-height: 29px;
+    margin-left: 30px;
+}
+.welcome a:hover{
+    color: #ff0000;
 }
 .login_info{
     display: none;

@@ -37,7 +37,7 @@
                     <span>|</span>
                     <a href="cartLoad?userId=${sessionScope.loginId}">我的购物车</a>
                     <span>|</span>
-                    <a href="">我的订单</a>
+                    <a href="orderList">我的订单</a>
                 </c:if>
             </div>
         </div>
@@ -85,16 +85,6 @@
                         <a href="javascript:" class="minus fr">-</a>
                     </div>
                 </div>
-
-                <c:forEach var="eNorm" items="${requestScope.norms}">
-                    <div class="type_select">
-                        <label>${eNorm.key}:</label>
-                        <c:forEach var="eNormValue" items="${eNorm.value}">
-                            <a href="" class="">${eNormValue}</a>
-                        </c:forEach>
-                    </div>
-                </c:forEach>
-
                 <div class="total_price">
                     总价：
                     <em>￥${requestScope.product["price"]}</em>
@@ -105,7 +95,7 @@
                         <a href="javascript:" class="add_cart_btn" onclick="addToCart('',${requestScope.product['id']})">加入购物车</a>
                     </c:if>
                     <c:if test="${sessionScope.loginId != null}">
-                        <a href="javascript:" class="add_cart_btn" onclick="addToCart(${sessionScope.loginId},${requestScope.product['id']})">加入购物车</a>
+                        <a href="javascript:" class="add_cart_btn" onclick="addToCart('${sessionScope.loginId}',${requestScope.product['id']})">加入购物车</a>
                     </c:if>
                 </div>
             </div>
