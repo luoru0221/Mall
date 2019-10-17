@@ -4,7 +4,8 @@ public class Order {
     private String id;  //订单编号
     private String uid;  //用户Id
     private double price;   //订单总价
-    private int type;   //订单状态
+    private String address;
+    private String name;
 
     public String getId() {
         return id;
@@ -30,11 +31,18 @@ public class Order {
         this.price = price;
     }
 
-    public int getType() {
-        return type;
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

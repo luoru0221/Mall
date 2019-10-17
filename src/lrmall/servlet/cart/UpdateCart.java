@@ -2,7 +2,6 @@ package lrmall.servlet.cart;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.mysql.cj.xdevapi.JsonArray;
 import lrmall.bean.Cart;
 import lrmall.dao.impl.CartDaoImpl;
 

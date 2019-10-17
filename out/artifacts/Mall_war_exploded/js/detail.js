@@ -26,7 +26,7 @@ function addToCart(uid, pid) {
         data: {
             userId: uid,
             productId: pid,
-            number:number
+            number: number
         },
         success: function (data) {
             alert("加入购物车成功!");
@@ -50,3 +50,38 @@ $(function () {
             $numShow.val(parseInt($numShow.val()) - 1);
     })
 });
+
+/**
+ * 立即购买
+ */
+function rightBuy(uid, productId) {
+    if (uid === null || uid === '') {
+        alert("您还没有登录，请先登录");
+    } else {
+        $.ajax({
+            url: "refreshCart",
+            type: "GET",
+            success: function (success) {
+                if (success) {
+                    $.ajax({
+                        url: "rightBuy",
+                        type: "GET",
+                        dataType: "JSON",
+                        data: {
+                            "productId": productId
+                        },
+                        success: function (success) {
+                            if (success) {
+                                window.location.href = "orderLoad";
+                            } else {
+                                alert("系统繁忙，请稍后重试！");
+                            }
+                        }
+                    })
+                } else {
+                    alert("系统繁忙，请稍后重试！");
+                }
+            }
+        })
+    }
+}

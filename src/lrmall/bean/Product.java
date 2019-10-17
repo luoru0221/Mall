@@ -8,13 +8,13 @@ public class Product {
     private String image; //商品图片
     private int type; //商品类别
     private int number;//商品数量
-    private int store; //商品所属店铺
+    private String store; //商品所属店铺
 
-    public int getStore() {
+    public String getStore() {
         return store;
     }
 
-    public void setStore(int store) {
+    public void setStore(String store) {
         this.store = store;
     }
 

@@ -44,6 +44,7 @@ public class AddToCart extends HttpServlet {
         cart.setUid(uid);
         cart.setPid(pid);
         cart.setNumber(number);
+        cart.setType(0);
         return cartDao.addCart(cart);
     }
 

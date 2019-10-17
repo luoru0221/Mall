@@ -70,8 +70,12 @@
     margin: 10px 0;
 }
 
+.content_con {
+    margin-bottom: 20px;
+}
+
 .order_list_th {
-    width: 980px;
+    width: 978px;
     height: 30px;
     border: 1px solid #ddd;
     background-color: #f7f7f7;
@@ -84,12 +88,12 @@
 }
 
 .order_list_th .col01 {
-    width: 20%;
+    width: 30%;
     margin-left: 20px;
 }
 
 .order_list_th .col02 {
-    width: 20%;
+    width: 40%;
 }
 
 .order_list_th .col03 {
@@ -98,7 +102,7 @@
 
 .order_list_td {
     height: 100px;
-    width: 980px;
+    width: 978px;
     border-bottom: 1px solid #dddddd;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
@@ -143,7 +147,7 @@
 }
 
 .user_list_th {
-    width: 980px;
+    width: 978px;
     height: 30px;
     border: 1px solid #ddd;
     background-color: #f7f7f7;
@@ -151,7 +155,7 @@
 }
 
 .user_list_td {
-    width: 980px;
+    width: 978px;
     height: 40px;
     border-bottom: 1px solid #ddd;
     border-left: 1px solid #ddd;
@@ -188,7 +192,7 @@
 }
 
 .product_list_th {
-    width: 980px;
+    width: 978px;
     height: 30px;
     border: 1px solid #ddd;
     background-color: #f7f7f7;
@@ -223,7 +227,7 @@
 }
 
 .product_list_td {
-    width: 980px;
+    width: 978px;
     height: 40px;
     border-bottom: 1px solid #ddd;
     border-left: 1px solid #ddd;
@@ -279,7 +283,7 @@
 
 .add_information select {
     height: 30px;
-    width: 150px;
+    width: 102px;
     font-size: 16px;
     font-family: 'Microsoft YaHei', serif;
     margin: 10px;
@@ -299,7 +303,7 @@
 }
 
 .operation_con {
-    width: 980px;
+    width: 978px;
     border: 1px solid #a8a8a8;
     display: none;
 }
@@ -354,7 +358,7 @@
 .con_input input, .con_area input {
     border: none;
     outline: none;
-    width: 285px;
+    width: 280px;
     height: 28px;
     line-height: 26px;
     font-size: 16px;
@@ -410,7 +414,32 @@
     height: 350px;
 }
 
+.order_operation a:hover {
+    color: red;
+}
 
+.send_con{
+    width: 979px;
+    height: 40px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    line-height: 41px;
+    margin: 0 auto;
+    display: none;
+}
+
+.send_product_btn {
+    width: 100px;
+    height: 40px;
+    float: right;
+    color: #fff;
+    background-color: red;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Microsoft YaHei', serif;
+    cursor: pointer;
+}
 
 .con_active {
     display: block;

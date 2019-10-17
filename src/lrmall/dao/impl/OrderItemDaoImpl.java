@@ -25,7 +25,12 @@ public class OrderItemDaoImpl extends DbUtil implements OrderItemDao {
 
     @Override
     public int delateOrderItem(OrderItem orderItem) {
-        return 0;
+        String sql = "DELETE FROM orderitem WHERE oid=?";
+        try {
+            return this.doUpdate(sql,new Object[]{orderItem.getOid()});
+        } finally {
+            this.close();
+        }
     }
 
     @Override
@@ -39,11 +44,12 @@ public class OrderItemDaoImpl extends DbUtil implements OrderItemDao {
         ArrayList<OrderItem> orderItems;
         OrderItem orderItem;
         Product product;
-        String sql = "SELECT orders.id,product.id,product.name,product.price,orderitem.number,product.image,orderitem.type FROM ORDERS,ORDERITEM,PRODUCT WHERE orders.uid = ? and orders.id = orderitem.oid and orderitem.pid = product.id";
+        String sql = "SELECT orders.id,product.id,product.name,product.price,orderitem.number,product.image," +
+                "orderitem.type FROM ORDERS,ORDERITEM,PRODUCT WHERE orders.uid = ? and orders.id = orderitem." +
+                "oid and orderitem.pid = product.id";
         try {
             ResultSet resultSet = this.doQuery(sql, new Object[]{uid});
             while (resultSet.next()) {
-
                 String orderId = resultSet.getString("orders.id");
                 int productId = resultSet.getInt("product.id");
                 String productName = resultSet.getString("product.name");
@@ -52,39 +58,131 @@ public class OrderItemDaoImpl extends DbUtil implements OrderItemDao {
                 int productNumber = resultSet.getInt("orderitem.number");
                 int orderItemType = resultSet.getInt("orderitem.type");
 
-                if (allOrders.containsKey(orderId)) {
-                    orderItem = new OrderItem();
-                    product = new Product();
-
-                    orderItem.setOid(orderId);
-                    product.setId(productId);
-                    orderItem.setPid(productId);
-                    product.setName(productName);
-                    product.setPrice(productPrice);
-                    product.setImage(productImage);
-                    orderItem.setType(orderItemType);
-                    orderItem.setNumber(productNumber);
-                    orderItem.setProduct(product);
-
-                    allOrders.get(orderId).add(orderItem);
-                } else {
+                if (!allOrders.containsKey(orderId)) {
                     orderItems = new ArrayList<>();
-                    orderItem = new OrderItem();
-                    product = new Product();
-
-                    orderItem.setOid(orderId);
-                    product.setId(productId);
-                    orderItem.setPid(productId);
-                    product.setName(productName);
-                    product.setPrice(productPrice);
-                    product.setImage(productImage);
-                    orderItem.setType(orderItemType);
-                    orderItem.setNumber(productNumber);
-                    orderItem.setProduct(product);
-
-                    orderItems.add(orderItem);
                     allOrders.put(orderId, orderItems);
                 }
+                product = new Product();
+                product.setId(productId);
+                product.setName(productName);
+                product.setPrice(productPrice);
+                product.setImage(productImage);
+
+                orderItem = new OrderItem();
+                orderItem.setOid(orderId);
+                orderItem.setPid(productId);
+                orderItem.setType(orderItemType);
+                orderItem.setNumber(productNumber);
+                orderItem.setProduct(product);
+
+                allOrders.get(orderId).add(orderItem);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return allOrders;
+    }
+
+    @Override
+    public HashMap<String, ArrayList<OrderItem>> selectAllOrdersByStore(String store) {
+        HashMap<String, ArrayList<OrderItem>> allOrders = new HashMap<>();
+        ArrayList<OrderItem> orderItems;
+        OrderItem orderItem;
+        Product product;
+        String sql = "SELECT orders.id,orderitem.pid,orderitem.number,orderitem.type,product.name," +
+                "product.price,product.image FROM PRODUCT,ORDERS,ORDERITEM WHERE product.store=? and product.id=" +
+                "orderitem.pid and orderitem.oid=orders.id";
+        try {
+            ResultSet resultSet = this.doQuery(sql, new Object[]{store});
+            while (resultSet.next()) {
+                String orderId = resultSet.getString("orders.id");
+                int productId = resultSet.getInt("orderitem.pid");
+                int productNumber = resultSet.getInt("orderitem.number");
+                int orderItemType = resultSet.getInt("orderitem.type");
+                String productName = resultSet.getString("product.name");
+                double productPrice = resultSet.getDouble("product.price");
+                String productImage = resultSet.getString("product.image");
+
+                //该订单号还不存在
+                if (!allOrders.containsKey(orderId)) {
+                    orderItems = new ArrayList<>();
+                    allOrders.put(orderId, orderItems);
+                }
+                product = new Product();
+                product.setId(productId);
+                product.setName(productName);
+                product.setPrice(productPrice);
+                product.setImage(productImage);
+
+                orderItem = new OrderItem();
+                orderItem.setOid(orderId);
+                orderItem.setType(orderItemType);
+                orderItem.setNumber(productNumber);
+                orderItem.setPid(productId);
+                orderItem.setProduct(product);
+
+                allOrders.get(orderId).add(orderItem);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return allOrders;
+    }
+
+    @Override
+    public int updateOrderItemType(OrderItem orderItem) {
+        String sql = "UPDATE ORDERITEM SET type=? WHERE oid=? and pid=?";
+        Object[] params = {orderItem.getType(), orderItem.getOid(), orderItem.getPid()};
+        try {
+            return this.doUpdate(sql, params);
+        } finally {
+            this.close();
+        }
+    }
+
+    @Override
+    public HashMap<String, ArrayList<OrderItem>> selectAllOrder() {
+        HashMap<String, ArrayList<OrderItem>> allOrders = new HashMap<>();
+        ArrayList<OrderItem> orderItems;
+        OrderItem orderItem;
+        Product product;
+        String sql = "SELECT orders.id,orderitem.pid,orderitem.number,orderitem.type,product.name," +
+                "product.price,product.image FROM PRODUCT,ORDERS,ORDERITEM WHERE product.id=" +
+                "orderitem.pid and orderitem.oid=orders.id";
+        try {
+            ResultSet resultSet = this.doQuery(sql, null);
+            while (resultSet.next()) {
+                String orderId = resultSet.getString("orders.id");
+                int productId = resultSet.getInt("orderitem.pid");
+                int productNumber = resultSet.getInt("orderitem.number");
+                int orderItemType = resultSet.getInt("orderitem.type");
+                String productName = resultSet.getString("product.name");
+                double productPrice = resultSet.getDouble("product.price");
+                String productImage = resultSet.getString("product.image");
+
+                //该订单号还不存在
+                if (!allOrders.containsKey(orderId)) {
+                    orderItems = new ArrayList<>();
+                    allOrders.put(orderId, orderItems);
+                }
+                product = new Product();
+                product.setId(productId);
+                product.setName(productName);
+                product.setPrice(productPrice);
+                product.setImage(productImage);
+
+                orderItem = new OrderItem();
+                orderItem.setOid(orderId);
+                orderItem.setType(orderItemType);
+                orderItem.setNumber(productNumber);
+                orderItem.setPid(productId);
+                orderItem.setProduct(product);
+
+                allOrders.get(orderId).add(orderItem);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -13,4 +13,6 @@ public interface EvaluateDao {
      */
     ArrayList<Evaluate> selectEvaluatesByPid(int pid);
 
+    int addEvaluateForProduct(Evaluate evaluate);
+
 }

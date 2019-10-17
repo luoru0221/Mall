@@ -18,17 +18,25 @@
 <body>
 <div class="header_con">
     <div class="header">
-        <div class="welcome fl">欢迎来到1号店!</div>
+        <div class="welcome fl">欢迎来到1号店！</div>
+        <c:if test="${sessionScope.userType == '1'}">
+            <div class="welcome fl"><a href="orders_merchan.jsp">我的店铺</a></div>
+        </c:if>
+        <c:if test="${sessionScope.userType == '2'}">
+            <div class="welcome fl"><a href="javascript:">免费申请开店</a></div>
+        </c:if>
         <div class="fr">
             <div class="login_btn fl">
                 <c:if test="${sessionScope.loginId == null}">
                     <a href="login.jsp">登录</a>
+                    <span>|</span>
+                    <a href="register.jsp">注册</a>
                 </c:if>
                 <c:if test="${sessionScope.loginId != null}">
                     <a href="usercenter.jsp">欢迎${sessionScope.loginId}</a>
+                    <span>|</span>
+                    <a href="exitLogin">退出登录</a>
                 </c:if>
-                <span>|</span>
-                <a href="register.jsp">注册</a>
             </div>
             <div class="user_link fl">
                 <c:if test="${sessionScope.loginId != null}">
@@ -86,16 +94,25 @@
                     </div>
                 </div>
                 <div class="total_price">
-                    总价：
+                    单价：
                     <em>￥${requestScope.product["price"]}</em>
                 </div>
                 <div class="operate_btn">
-                    <a href="javascript:" class="buy_btn">立即购买</a>
                     <c:if test="${sessionScope.loginId == null}">
-                        <a href="javascript:" class="add_cart_btn" onclick="addToCart('',${requestScope.product['id']})">加入购物车</a>
+                        <a href="javascript:" class="buy_btn"
+                           onclick="rightBuy('',${requestScope.product['id']})">立即购买</a>
                     </c:if>
                     <c:if test="${sessionScope.loginId != null}">
-                        <a href="javascript:" class="add_cart_btn" onclick="addToCart('${sessionScope.loginId}',${requestScope.product['id']})">加入购物车</a>
+                        <a href="javascript:" class="buy_btn"
+                           onclick="rightBuy('${sessionScope.loginId}',${requestScope.product['id']})">立即购买</a>
+                    </c:if>
+                    <c:if test="${sessionScope.loginId == null}">
+                        <a href="javascript:" class="add_cart_btn"
+                           onclick="addToCart('',${requestScope.product['id']})">加入购物车</a>
+                    </c:if>
+                    <c:if test="${sessionScope.loginId != null}">
+                        <a href="javascript:" class="add_cart_btn"
+                           onclick="addToCart('${sessionScope.loginId}',${requestScope.product['id']})">加入购物车</a>
                     </c:if>
                 </div>
             </div>
@@ -110,24 +127,14 @@
 
         <div class="tab_content"><!--商品评价-->
             <ul class="judge_list_con">
-                <li>
-                    <b class="user_name">罗汝</b>
-                    <div class="judge_detail">
-                        "派送非常快，第二天上午就收到。2天使用初步总结，前一部手机也是华为P9plus.MATE10pro包装原封未拆精致大气。拆开后第一眼就看到宝石蓝的手机，非常惊艳；然后就是配件一应俱全。开机各方面设置，把通讯录、短信等同步好，同品牌手机同步很快。和P9plus一样的后置指纹识别很方便。录制指纹容易，解锁非常快，秒开！屏幕完好，默认分辨率显示效果很好。"
-                    </div>
-                </li>
-                <li>
-                    <b class="user_name">罗汝</b>
-                    <div class="judge_detail">
-                        "派送非常快，第二天上午就收到。2天使用初步总结，前一部手机也是华为P9plus.MATE10pro包装原封未拆精致大气。拆开后第一眼就看到宝石蓝的手机，非常惊艳；然后就是配件一应俱全。开机各方面设置，把通讯录、短信等同步好，同品牌手机同步很快。和P9plus一样的后置指纹识别很方便。录制指纹容易，解锁非常快，秒开！屏幕完好，默认分辨率显示效果很好。"
-                    </div>
-                </li>
-                <li>
-                    <b class="user_name">罗汝</b>
-                    <div class="judge_detail">
-                        "派送非常快，第二天上午就收到。2天使用初步总结，前一部手机也是华为P9plus.MATE10pro包装原封未拆精致大气。拆开后第一眼就看到宝石蓝的手机，非常惊艳；然后就是配件一应俱全。开机各方面设置，把通讯录、短信等同步好，同品牌手机同步很快。和P9plus一样的后置指纹识别很方便。录制指纹容易，解锁非常快，秒开！屏幕完好，默认分辨率显示效果很好。"
-                    </div>
-                </li>
+                <c:forEach var="evaluate" items="${requestScope.evaluates}">
+                    <li>
+                        <b class="user_name">${evaluate['uid']}&nbsp;&nbsp;${evaluate['time']}</b>
+                        <div class="judge_detail">
+                            ${evaluate['content']}
+                        </div>
+                    </li>
+                </c:forEach>
             </ul>
         </div>
     </div>

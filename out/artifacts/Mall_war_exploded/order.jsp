@@ -13,16 +13,24 @@
 <div class="header_con">
     <div class="header">
         <div class="welcome fl">欢迎来到1号店！</div>
+        <c:if test="${sessionScope.userType == '1'}">
+            <div class="welcome fl"><a href="merchan.jsp">我的店铺</a></div>
+        </c:if>
+        <c:if test="${sessionScope.userType == '2'}">
+            <div class="welcome fl"><a href="javascript:">免费申请开店</a></div>
+        </c:if>
         <div class="fr">
             <div class="login_btn fl">
                 <c:if test="${sessionScope.loginId == null}">
                     <a href="login.jsp">登录</a>
+                    <span>|</span>
+                    <a href="register.jsp">注册</a>
                 </c:if>
                 <c:if test="${sessionScope.loginId != null}">
                     <a href="usercenter.jsp">欢迎${sessionScope.loginId}</a>
+                    <span>|</span>
+                    <a href="exitLogin">退出登录</a>
                 </c:if>
-                <span>|</span>
-                <a href="register.jsp">注册</a>
             </div>
             <div class="user_link fl">
                 <c:if test="${sessionScope.loginId != null}">

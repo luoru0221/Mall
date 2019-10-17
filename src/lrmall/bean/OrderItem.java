@@ -7,6 +7,15 @@ public class OrderItem {
     private int number;   //商品数量
     private int type;  //状态
     private Product product; //订单项包括的商品
+    private String uid;
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
 
     public Product getProduct() {
         return product;

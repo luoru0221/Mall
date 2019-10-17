@@ -136,7 +136,7 @@
     font-weight: normal;
 }
 .goods_num{
-    padding-top: 20px;
+    padding-top: 40px;
 }
 .goods_num .num_name {
     width: 70px;
@@ -196,7 +196,7 @@
 .total_price {
     height: 35px;
     line-height: 35px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .total_price em {
     font-style: normal;
@@ -205,7 +205,7 @@
 }
 .operate_btn {
     height: 40px;
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 20px;
     font-size: 0;
     position: relative;

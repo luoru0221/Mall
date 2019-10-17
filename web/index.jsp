@@ -21,10 +21,10 @@
     <div class="header">
         <div class="welcome fl">欢迎来到1号店！</div>
         <c:if test="${sessionScope.userType == '1'}">
-            <div class="welcome fl"><a href="login.jsp">我的店铺</a></div>
+            <div class="welcome fl"><a href="ordersMerchan">我的店铺</a></div>
         </c:if>
         <c:if test="${sessionScope.userType == '2'}">
-            <div class="welcome fl"><a href="login.jsp">免费申请开店</a></div>
+            <div class="welcome fl"><a href="javascript:">免费申请开店</a></div>
         </c:if>
         <div class="fr">
             <div class="login_btn fl">
@@ -57,9 +57,9 @@
     <a href="index.jsp" class="logo fl"><img src="images/logo03.png" alt="logo"></a>
     <div class="search_con fl">
         <label>
-            <input type="text" class="input_text fl" name="" placeholder="搜索商品">
+            <input type="text" class="input_text fl" id="search_keyword" placeholder="搜索商品">
         </label>
-        <input type="button" class="input_btn fr" name="" value="搜索">
+        <input type="button" class="input_btn fr" onclick="searchProduct()" value="搜索">
     </div>
     <div class="guest_cart fr">
         <c:if test="${sessionScope.loginId != null}">
@@ -79,48 +79,6 @@
     </div>
 
     <ul class="sub_menu">
-        <li>
-            <div class="level1">
-                <a href="#">电脑</a>
-                <a href="#">办公</a>
-            </div>
-            <div class="level2">
-                <div class="list_group">
-                    <div class="group_name fl">电脑 &gt;</div>
-                    <div class="group_detail fl">
-                        <a href="#">曲面电视</a>
-                        <a href="#">超薄电视</a>
-                        <a href="#">HDR电视</a>
-                        <a href="#">OLED电视</a>
-                        <a href="#">4K超清电视</a>
-                        <a href="#">人工智能电视</a>
-                        <a href="#">55英寸</a>
-                        <a href="#">65英寸</a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="level1">
-                <a href="#">电脑</a>
-                <a href="#">办公</a>
-            </div>
-            <div class="level2">
-                <div class="list_group">
-                    <div class="group_name fl">电脑 &gt;</div>
-                    <div class="group_detail fl">
-                        <a href="#">曲面电视</a>
-                        <a href="#">超薄电视</a>
-                        <a href="#">HDR电视</a>
-                        <a href="#">OLED电视</a>
-                        <a href="#">4K超清电视</a>
-                        <a href="#">人工智能电视</a>
-                        <a href="#">55英寸</a>
-                        <a href="#">65英寸</a>
-                    </div>
-                </div>
-            </div>
-        </li>
     </ul>
 
     <div class="news">

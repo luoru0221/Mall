@@ -11,22 +11,31 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/list.css">
-    <script type="text/javascript" src="js/cart.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/list.js"></script>
 </head>
 <body>
 <div class="header_con">
     <div class="header">
         <div class="welcome fl">欢迎来到1号店！</div>
+        <c:if test="${sessionScope.userType == '1'}">
+            <div class="welcome fl"><a href="ordersMerchan">我的店铺</a></div>
+        </c:if>
+        <c:if test="${sessionScope.userType == '2'}">
+            <div class="welcome fl"><a href="javascript:">免费申请开店</a></div>
+        </c:if>
         <div class="fr">
             <div class="login_btn fl">
                 <c:if test="${sessionScope.loginId == null}">
                     <a href="login.jsp">登录</a>
+                    <span>|</span>
+                    <a href="register.jsp">注册</a>
                 </c:if>
                 <c:if test="${sessionScope.loginId != null}">
                     <a href="usercenter.jsp">欢迎${sessionScope.loginId}</a>
+                    <span>|</span>
+                    <a href="exitLogin">退出登录</a>
                 </c:if>
-                <span>|</span>
-                <a href="register.jsp">注册</a>
             </div>
             <div class="user_link fl">
                 <c:if test="${sessionScope.loginId != null}">
@@ -41,12 +50,11 @@
         </div>
     </div>
 </div>
-
 <div class="search_bar priority">
     <a href="index.jsp" class="logo fl"><img src="images/logo03.png" alt="logo"></a>
     <div class="search_con fl">
         <label>
-            <input type="text" class="input_text fl" name="" placeholder="搜索商品">
+            <input type="text" class="input_text fl" id="keyword_input" placeholder="搜索商品" keyword=${sessionScope.keyword}>
         </label>
         <input type="button" class="input_btn fr" name="" value="搜索">
     </div>
@@ -58,106 +66,98 @@
     </div>
 </div>
 <div class="navbar_con">
-    <div class="navbar">
-        <h1 class="fl">全部商品分类</h1>
-    </div>
 </div>
 <div class="center_con priority">
-    <ul class="subnav fl">
-        <li><a href="" class="phone">手机数码</a></li>
-        <li><a href="" class="computer">电脑办公</a></li>
-        <li><a href="" class="makeup">美妆护理</a></li>
-        <li><a href="" class="clothes">家居家装</a></li>
-        <li><a href="" class="electric">生活电器</a></li>
-        <li><a href="" class="food">食品零食</a></li>
-    </ul>
-    <div class="warp fr">
+    <div class="warp priority">
         <ul class="goods_list">
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
             <li>
                 <a href=""><img src="" alt="img"></a>
-                <h4><a href="">什么东西</a></h4>
-                <div class="price">价格</div>
+                <h4><a href=""></a></h4>
+                <div class="price"></div>
             </li>
         </ul>
     </div>
-    <div class="pagenation fr">
-        <a href="#">&lt上一页</a>
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">下一页&gt</a>
+    <div class="pagenation priority">
+        <a href="javascript:" class="prePage">&lt上一页</a>
+        <c:forEach var="page" items="${sessionScope.pages}">
+            <c:if test="${page==sessionScope.nowPage}">
+                <a href="#" class="pageCode active">${page}</a>
+            </c:if>
+            <c:if test="${page!=sessionScope.nowPage}">
+                <a href="#" class="pageCode">${page}</a>
+            </c:if>
+        </c:forEach>
+        <a href="javascript:" class="nextPage">下一页&gt</a>
     </div>
 </div>
 

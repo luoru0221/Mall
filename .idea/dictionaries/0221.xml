@@ -1,13 +1,22 @@
 <component name="ProjectDictionaryState">
   <dictionary name="罗汝0221">
     <words>
+      <w>addproduct</w>
+      <w>addtype</w>
+      <w>confire</w>
       <w>cpwd</w>
       <w>delate</w>
+      <w>getc</w>
+      <w>infor</w>
       <w>luoru</w>
+      <w>merchan</w>
       <w>navbar</w>
       <w>orderitem</w>
       <w>orderlist</w>
+      <w>pagenation</w>
+      <w>producttype</w>
       <w>recname</w>
+      <w>setc</w>
       <w>subnav</w>
       <w>usercenter</w>
       <w>userid</w>

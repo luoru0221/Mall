@@ -3,9 +3,11 @@ package lrmall.servlet.order;
 import lrmall.bean.Order;
 import lrmall.bean.OrderItem;
 import lrmall.bean.Product;
+import lrmall.bean.User;
 import lrmall.dao.impl.CartDaoImpl;
 import lrmall.dao.impl.OrderDaoImpl;
 import lrmall.dao.impl.OrderItemDaoImpl;
+import lrmall.dao.impl.UserDaoImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,13 +18,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- *  @author: Luoru
- *  @Date: 2019/10/13 20:41
- *  @Description: 添加订单到数据库
+ * @author: Luoru
+ * @Date: 2019/10/13 20:41
+ * @Description: 添加订单到数据库
  */
 @WebServlet("/addOrder")
 public class AddOrder extends HttpServlet {
 
+    private UserDaoImpl userDao = new UserDaoImpl();
     private OrderDaoImpl orderDao = new OrderDaoImpl();
     private OrderItemDaoImpl orderItemDao = new OrderItemDaoImpl();
     private CartDaoImpl cartDao = new CartDaoImpl();
@@ -30,12 +33,14 @@ public class AddOrder extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String uid = (String) req.getSession().getAttribute("loginId");
+        User user = userDao.queryUserById(uid);
         ArrayList<Product> products = cartDao.selectToOrderCart(uid);
         String orderId = uid + System.currentTimeMillis();
 
-        saveOrder(uid, products, orderId);
-        saveOrderItem(products,orderId);
+        saveOrder(uid, products, orderId, user);
+        saveOrderItem(products, orderId);
 
+        cartDao.deleteCartTemp(uid);
         resp.sendRedirect("orderList");
     }
 
@@ -44,7 +49,7 @@ public class AddOrder extends HttpServlet {
         this.doGet(req, resp);
     }
 
-    private void saveOrder(String uid, ArrayList<Product> products, String orderId) {
+    private void saveOrder(String uid, ArrayList<Product> products, String orderId, User user) {
         double sumPrice = 0;
         for (Product product : products) {
             sumPrice += (product.getPrice() * product.getNumber());
@@ -53,7 +58,8 @@ public class AddOrder extends HttpServlet {
         order.setId(orderId);
         order.setUid(uid);
         order.setPrice(sumPrice);
-        order.setType(0);
+        order.setAddress(user.getAddress());
+        order.setName(user.getRecName());
         orderDao.createOrder(order);
     }
 

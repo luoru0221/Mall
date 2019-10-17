@@ -29,6 +29,17 @@ public class EvaluateDaoImpl extends DbUtil implements EvaluateDao {
         return evaluates;
     }
 
+    @Override
+    public int addEvaluateForProduct(Evaluate evaluate) {
+        String sql = "INSERT INTO EVALUATE (pid,uid,content,time) VALUES (?,?,?,?)";
+        Object[] params = {evaluate.getPid(),evaluate.getUid(),evaluate.getContent(),evaluate.getTime()};
+        try {
+            return this.doUpdate(sql, params);
+        } finally {
+            this.close();
+        }
+    }
+
     private void setEvaluate(ResultSet resultSet,Evaluate evaluate) throws SQLException {
         evaluate.setId(resultSet.getInt("id"));
         evaluate.setPid(resultSet.getInt("pid"));

@@ -30,7 +30,7 @@ public class Login extends HttpServlet {
             session.setAttribute("userType",type);
             if(type==0){
                 //重定向到后台
-                resp.sendRedirect("manager");
+                resp.sendRedirect("ordersManager");
             }else {
                 //重定向到首页
                 resp.sendRedirect("index.jsp");
