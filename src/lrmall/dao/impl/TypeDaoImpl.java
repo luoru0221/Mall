@@ -76,4 +76,55 @@ public class TypeDaoImpl extends DbUtil implements TypeDao {
         }
         return childrenTypes;
     }
+
+    @Override
+    public ArrayList<Type> selectSlibingTypes(int id) {
+        String sql = "SELECT * FROM producttype WHERE id = ?";
+        int fid = 0;
+        try {
+            ResultSet resultSet = this.doQuery(sql, new Object[]{id});
+            if(resultSet.next()){
+                fid = resultSet.getInt("fid");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return this.selectChildrenTypes(fid);
+    }
+
+    @Override
+    public Type selectFatherType(int id) {
+        String sql = "SELECT * FROM producttype WHERE id = ?";
+        Type type = new Type();
+        int fid = 0;
+        try {
+            ResultSet resultSet = this.doQuery(sql, new Object[]{id});
+            if(resultSet.next()){
+                fid = resultSet.getInt("fid");
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        String sql2 = "SELECT * From producttype WHERE id = ?";
+        try {
+            ResultSet resultSet = this.doQuery(sql2, new Object[]{fid});
+            if(resultSet.next()){
+                int typeId = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                int fId = resultSet.getInt("fid");
+                type.setId(typeId);
+                type.setName(name);
+                type.setFid(fId);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return type;
+    }
 }

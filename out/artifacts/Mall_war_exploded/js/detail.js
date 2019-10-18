@@ -85,3 +85,7 @@ function rightBuy(uid, productId) {
         })
     }
 }
+function searchProduct() {
+    var keyword = $("#search_keyword").val();
+    window.location.href = "searchProduct?keyword=" + keyword;
+}

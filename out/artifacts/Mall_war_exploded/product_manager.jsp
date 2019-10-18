@@ -30,7 +30,7 @@
 </div>
 <div class="main_con priority">
     <div class="left_menu priority">
-        <h3>商家中心</h3>
+        <h3>管理员中心</h3>
         <ul id="menu">
             <li><a href="ordersManager" class="menu_a">订单管理</a></li>
             <li><a href="userManager" class="menu_a">用户管理</a></li>
@@ -73,14 +73,19 @@
                             <textarea id="p_description"
                                       class="productDescription_input">${product['description']}</textarea>
                         </div>
-                        <div class="con_input">
+                        <div class="con_input priority">
                             <label for="p_price">单价：</label>
                             <input type="text" id="p_price" class="productPrice_input" value="${product['price']}">
                         </div>
-                            <%--<div class="con_input">
-                                <label for="p_stock">库存：</label>
-                                <input type="text" id="p_stock">
-                            </div>--%>
+                        <div class="select_con">
+                            <label typeId="${product['type']}">商品分类：</label><br>
+                            <select name="pType" class="firstType">
+                            </select>
+                            <select name="pType" class="secondType">
+                            </select>
+                            <select name="pType" class="thirdType">
+                            </select>
+                        </div>
                         <div class="con_btn priority">
                             <button class="save_change fl">保存修改</button>
                             <button class="delate_product fr">删除商品</button>

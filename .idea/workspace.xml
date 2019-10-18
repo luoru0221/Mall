@@ -7,264 +7,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4af9074f-3d79-4ea4-ba22-e4f0305f1604" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/Demo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/Manager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/MerchanLoad.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/Type.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/TypeTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/merchan.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/merchant.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/bean/Type.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/TypeDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/TypeDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/cart/RightBuy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/AddFirstType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/AddType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/DeleteOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/DeleteUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/OrdersManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/ProductManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/SelectInitTypes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/SelectType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/manager/UserManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/merchan/InitAllTypes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/merchan/OrdersMerchan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/merchan/ProductMerchan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/merchan/SendProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/SearchProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/TypeList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/order/CommentOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/order/ConfireReceipt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/order/PayOrderItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/product/DeleteProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/product/DetailLoad.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/product/SearchProductPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/product/UpdateProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/utils/ImageUpload.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/utils/LocalTime.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/addproduct_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/addproduct_merchan.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/addtype_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/images/goods/1571157082467.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/images/goods/1571212423180.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/images/goods/1571255742204.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/images/goods/1571256252985.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/addproduct_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/addproduct_merchan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/addtype_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/orderlist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/orders_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/orders_merchan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/product_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/product_merchan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/user_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/orders_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/orders_merchan.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/product_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/product_merchan.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/user_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/bean/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/dao/TypeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/dao/impl/TypeDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/cart/RightBuy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/AddFirstType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/AddType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/DeleteOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/DeleteUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/OrdersManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/SelectInitTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/SelectType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/merchan/InitAllTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/merchan/OrdersMerchan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/merchan/ProductMerchan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/merchan/SendProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/onload/SearchProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/onload/TypeList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/order/CommentOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/order/ConfireReceipt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/order/PayOrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/product/DeleteProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/product/SearchProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/product/UpdateProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/utils/ImageUpload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lrmall/utils/LocalTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/Demo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/Manager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/MerchanLoad.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/Type.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/TypeTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/merchan.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/merchant.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/bean/Type.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/TypeDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/TypeDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/cart/RightBuy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/AddFirstType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/AddType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/DeleteOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/DeleteUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/OrdersManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/ProductManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/SelectInitTypes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/SelectType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/manager/UserManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/merchan/InitAllTypes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/merchan/OrdersMerchan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/merchan/ProductMerchan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/merchan/SendProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/SearchProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/TypeList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/order/CommentOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/order/ConfireReceipt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/order/PayOrderItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/product/DeleteProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/product/DetailLoad.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/product/SearchProductPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/product/UpdateProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/utils/ImageUpload.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/utils/LocalTime.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/addproduct_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/addproduct_merchan.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/addtype_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/goods/1571157082467.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/goods/1571212423180.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/goods/1571255742204.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/goods/1571256252985.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/addproduct_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/addproduct_merchan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/addtype_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/orderlist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/orders_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/orders_merchan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/product_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/product_merchan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/user_manager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/orders_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/orders_merchan.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/product_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/product_merchan.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/user_manager.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/merchan/TypeInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/product/ProductShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lrmall/servlet/product/SelectProductByType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/moreproduct.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/moreproduct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/moreproduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/0221.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/0221.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/bean/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/bean/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/bean/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/bean/OrderItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/bean/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/bean/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/CartDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/CartDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/EvaluateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/EvaluateDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/OrderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/OrderItemDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/OrderItemDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/JsonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/MerchanLoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/TypeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/manager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/manager.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/merchan.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/merchant.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/CartDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/CartDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/EvaluateDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/EvaluateDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/OrderDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/OrderDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/OrderItemDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/OrderItemDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/TypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/TypeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/ProductDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/ProductDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/cart/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/cart/AddToCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/cart/DeleteCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/cart/DeleteCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/cart/UpdateCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/cart/UpdateCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/login/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/login/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/DetailLoad.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/OrderListLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/order/OrderListLoad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/OrderLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/order/OrderLoad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/UserCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/usercenter/UserCenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/order/AddOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/order/AddOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/product/AddProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/product/AddProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/TypeDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/dao/impl/TypeDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/onload/Index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/addproduct_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/addproduct_manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/addtype_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/addtype_manager.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/detail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/list.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/manager.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/merchant.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/merchant.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/orderlist.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/css/orderlist.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/manager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/merchant.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/order.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/Test/manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/merchan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/product_manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/js/product_manager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/order.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/orderlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/orderlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/orders_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/orders_manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/product_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/product_manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/product_merchan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/product_merchan.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/user_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/user_manager.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/usercenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/usercenter.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/Test/JsonTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/bean/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/bean/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/bean/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/bean/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/bean/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/bean/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/CartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/EvaluateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/EvaluateDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/OrderItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/OrderItemDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lrmall/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/impl/CartDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/impl/CartDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/impl/EvaluateDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/impl/EvaluateDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/impl/OrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/impl/OrderDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/impl/OrderItemDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/impl/OrderItemDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/TypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/TypeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lrmall/dao/impl/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/impl/ProductDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/cart/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/cart/AddToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/cart/UpdateCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/cart/UpdateCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/onload/DetailLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/product/DetailLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/onload/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/manager/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/onload/OrderListLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/order/OrderListLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/onload/OrderLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/order/OrderLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/onload/UserCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/usercenter/UserCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/order/AddOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/order/AddOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/product/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/product/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/bean/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/bean/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/bean/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/bean/OrderItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/bean/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/bean/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/CartDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/CartDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/EvaluateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/EvaluateDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/OrderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/OrderItemDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/OrderItemDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lrmall/dao/impl/TypeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/dao/impl/TypeDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/onload/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/onload/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lrmall/servlet/product/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lrmall/servlet/product/UpdateProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/JsonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/MerchanLoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/TypeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/manager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/manager.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/merchan.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/merchant.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/CartDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/CartDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/EvaluateDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/EvaluateDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/OrderDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/OrderDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/OrderItemDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/OrderItemDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/TypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/TypeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/ProductDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/ProductDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/cart/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/cart/AddToCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/cart/DeleteCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/cart/DeleteCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/cart/UpdateCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/cart/UpdateCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/login/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/login/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/DetailLoad.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/OrderListLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/order/OrderListLoad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/OrderLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Mall_war_exploded/WEB-INF/classes/lrmall/servlet/order/OrderLoad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/UserCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/usercenter/UserCenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/order/AddOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/order/AddOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/product/AddProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/product/AddProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/TypeDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/dao/impl/TypeDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/servlet/onload/Index.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/list.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/manager.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/merchant.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/merchant.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/orderlist.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/orderlist.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/manager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/merchant.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/orderlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/orderlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/product_manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/product_manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/product_merchan.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/product_merchan.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/lrmall/Test/manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/merchan.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/orderlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/orderlist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/usercenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/usercenter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/product_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/product_manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/product_merchan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/product_merchan.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -297,92 +118,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1692">
-              <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+            <state relative-caret-position="2160">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/order.jsp">
+        <entry file="file://$PROJECT_DIR$/web/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="114">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+              <folding>
+                <element signature="e#27#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/orderlist.jsp">
+        <entry file="file://$PROJECT_DIR$/web/js/list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+            <state relative-caret-position="142">
+              <caret line="81" column="38" lean-forward="true" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/orders_manager.jsp">
+        <entry file="file://$PROJECT_DIR$/web/js/moreproduct.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="169">
+              <caret line="89" column="51" selection-start-line="89" selection-start-column="51" selection-end-line="89" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/addtype_manager.jsp">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/addproduct_manager.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/user_manager.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/product_manager.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/orders_merchan.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/usercenter.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+            <state relative-caret-position="147">
+              <caret line="62" column="10" lean-forward="true" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -394,9 +173,9 @@
       <list>
         <option value="package-info" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="Interface" />
         <option value="Jsp File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Class" />
       </list>
@@ -408,57 +187,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/AddProductManager.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/ProductManager.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/OrdersManager.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/UserManager.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/login/Login.java" />
-        <option value="$PROJECT_DIR$/web/js/user_manager.js" />
-        <option value="$PROJECT_DIR$/src/lrmall/dao/TypeDao.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/bean/Type.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/dao/impl/TypeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/AddFirstType.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/LoadcTypes.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/SelectChildTypes.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/SelectInitTypes.java" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/AddType.java" />
         <option value="$PROJECT_DIR$/web/js/addtype_manager.js" />
-        <option value="$PROJECT_DIR$/web/css/manager.css" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/merchan/InitAllTypes.java" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/manager/SelectType.java" />
-        <option value="$PROJECT_DIR$/web/js/addproduct_manager.js" />
         <option value="$PROJECT_DIR$/web/js/orders_merchan.js" />
-        <option value="$PROJECT_DIR$/web/js/product_merchan.js" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/merchan/ProductMerchan.java" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/merchan/ordersMerchan.java" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/merchan/OrdersMerchan.java" />
         <option value="$PROJECT_DIR$/web/orders_merchan.jsp" />
-        <option value="$PROJECT_DIR$/web/product_merchan.jsp" />
         <option value="$PROJECT_DIR$/web/addproduct_merchan.jsp" />
         <option value="$PROJECT_DIR$/web/js/addproduct_merchan.js" />
-        <option value="$PROJECT_DIR$/web/css/merchant.css" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/onload/TypeList.java" />
         <option value="$PROJECT_DIR$/src/lrmall/Test/Demo.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/js/index.js" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/onload/SearchProduct.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/dao/ProductDao.java" />
-        <option value="$PROJECT_DIR$/src/lrmall/dao/impl/ProductDaoImpl.java" />
-        <option value="$PROJECT_DIR$/web/list.jsp" />
-        <option value="$PROJECT_DIR$/web/js/list.js" />
-        <option value="$PROJECT_DIR$/web/css/list.css" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/product/SearchProductPage.java" />
         <option value="$PROJECT_DIR$/src/lrmall/servlet/product/DetailLoad.java" />
         <option value="$PROJECT_DIR$/web/cart.jsp" />
-        <option value="$PROJECT_DIR$/web/detail.jsp" />
-        <option value="$PROJECT_DIR$/web/order.jsp" />
         <option value="$PROJECT_DIR$/web/orderlist.jsp" />
         <option value="$PROJECT_DIR$/web/usercenter.jsp" />
         <option value="$PROJECT_DIR$/web/user_manager.jsp" />
-        <option value="$PROJECT_DIR$/web/product_manager.jsp" />
         <option value="$PROJECT_DIR$/web/orders_manager.jsp" />
         <option value="$PROJECT_DIR$/web/addtype_manager.jsp" />
+        <option value="$PROJECT_DIR$/web/css/list.css" />
+        <option value="$PROJECT_DIR$/src/lrmall/dao/TypeDao.java" />
+        <option value="$PROJECT_DIR$/src/lrmall/dao/impl/TypeDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/js/index.js" />
+        <option value="$PROJECT_DIR$/src/lrmall/servlet/product/ProductShow.java" />
+        <option value="$PROJECT_DIR$/src/lrmall/dao/ProductDao.java" />
+        <option value="$PROJECT_DIR$/src/lrmall/servlet/product/SelectProductByType.java" />
+        <option value="$PROJECT_DIR$/web/css/moreproduct.css" />
+        <option value="$PROJECT_DIR$/src/lrmall/servlet/onload/Index.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/css/manager.css" />
+        <option value="$PROJECT_DIR$/web/css/merchant.css" />
         <option value="$PROJECT_DIR$/web/addproduct_manager.jsp" />
+        <option value="$PROJECT_DIR$/web/product_manager.jsp" />
+        <option value="$PROJECT_DIR$/web/js/addproduct_manager.js" />
+        <option value="$PROJECT_DIR$/src/lrmall/servlet/merchan/TypeInit.java" />
+        <option value="$PROJECT_DIR$/src/lrmall/servlet/product/UpdateProduct.java" />
+        <option value="$PROJECT_DIR$/src/lrmall/dao/impl/ProductDaoImpl.java" />
+        <option value="$PROJECT_DIR$/web/js/product_merchan.js" />
+        <option value="$PROJECT_DIR$/web/js/product_manager.js" />
+        <option value="$PROJECT_DIR$/web/product_merchan.jsp" />
+        <option value="$PROJECT_DIR$/web/js/detail.js" />
+        <option value="$PROJECT_DIR$/web/detail.jsp" />
+        <option value="$PROJECT_DIR$/web/moreproduct.jsp" />
+        <option value="$PROJECT_DIR$/web/js/orderlist.js" />
+        <option value="$PROJECT_DIR$/web/order.jsp" />
+        <option value="$PROJECT_DIR$/web/js/moreproduct.js" />
+        <option value="$PROJECT_DIR$/web/js/list.js" />
+        <option value="$PROJECT_DIR$/web/list.jsp" />
       </list>
     </option>
   </component>
@@ -476,10 +255,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="949" />
-    <option name="y" value="-11" />
-    <option name="width" value="983" />
-    <option name="height" value="1043" />
+    <option name="x" value="948" />
+    <option name="y" value="-12" />
+    <option name="width" value="984" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -512,13 +291,6 @@
               <item name="Mall" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lrmall" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mall" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lrmall" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -526,23 +298,7 @@
               <item name="Mall" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lrmall" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mall" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lrmall" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mall" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lrmall" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="merchan" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mall" type="b2602c69:ProjectViewProjectNode" />
@@ -564,12 +320,6 @@
               <item name="Mall" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mall" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mall" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mall" type="b2602c69:ProjectViewProjectNode" />
@@ -889,7 +639,8 @@
       <workItem from="1571231601522" duration="28425000" />
       <workItem from="1571293912980" duration="2092000" />
       <workItem from="1571298099667" duration="2006000" />
-      <workItem from="1571309148057" duration="29525000" />
+      <workItem from="1571309148057" duration="30215000" />
+      <workItem from="1571394751549" duration="29513000" />
     </task>
     <task id="LOCAL-00001" summary="Servlet+JSP实现的网上商城">
       <created>1566374108153</created>
@@ -933,16 +684,23 @@
       <option name="project" value="LOCAL" />
       <updated>1570989279310</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="三级分类+搜索">
+      <created>1571349138815</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571349138815</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="778985000" />
+    <option name="totallyTimeSpent" value="809188000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973357" visible="true" weight="0.2077607" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973357" visible="true" weight="0.22231205" />
       <window_info id="Structure" order="1" sideWeight="0.5009009" side_tool="true" weight="0.35966387" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -952,7 +710,7 @@
       <window_info id="Web" order="7" sideWeight="0.5026643" side_tool="true" weight="0.2166532" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.39076376" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4995958" weight="0.5150977" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4987874" visible="true" weight="0.053285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -960,7 +718,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004042" side_tool="true" weight="0.5097691" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012126" side_tool="true" weight="0.4689165" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.053285968" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -975,40 +733,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973357" visible="true" weight="0.13257882" />
-      <window_info id="Structure" order="1" sideWeight="0.5009009" side_tool="true" weight="0.35966387" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" weight="0.32983023" />
-      <window_info id="Web" order="7" sideWeight="0.5026643" side_tool="true" weight="0.2166532" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.39076376" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4995958" visible="true" weight="0.26998225" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004042" side_tool="true" weight="0.5097691" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.053285968" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3285968" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3285968" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32983023" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1060,7 +784,8 @@
     <MESSAGE value="Servlet+JSP实现的网上商城&#10;注册登录" />
     <MESSAGE value="首页交互" />
     <MESSAGE value="提交订单" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交订单" />
+    <MESSAGE value="三级分类+搜索" />
+    <option name="LAST_COMMIT_MESSAGE" value="三级分类+搜索" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1075,125 +800,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/manager/DeleteOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/manager/DeleteUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/onload/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/manager/SelectInitTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/manager/AddType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/manager.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="292" column="17" lean-forward="true" selection-start-line="292" selection-start-column="17" selection-end-line="292" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/dao/impl/TypeDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/manager/SelectType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/orders_merchan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/Test/merchan.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="202" column="7" lean-forward="true" selection-start-line="202" selection-start-column="7" selection-end-line="202" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/Test/merchant.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/merchan/ProductMerchan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/Test/MerchanLoad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/product_merchan.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -1201,38 +807,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/product_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="88" column="36" lean-forward="true" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/product_merchan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/addproduct_manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="136" column="3" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/addproduct_merchan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4020">
           <caret line="134" column="13" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/merchant.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2127">
-          <caret line="285" column="17" selection-start-line="285" selection-start-column="17" selection-end-line="285" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1256,84 +834,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/Test/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/Test/Demo.java" />
     <entry file="file://$PROJECT_DIR$/web/js/addtype_manager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/merchan/InitAllTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/dao/impl/ProductDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="207" column="55" lean-forward="true" selection-start-line="207" selection-start-column="55" selection-end-line="207" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1729">
-          <caret line="66" column="3" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
-          <folding>
-            <element signature="e#27#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/onload/SearchProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/dao/ProductDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1344,39 +849,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="140" column="17" lean-forward="true" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/product/SearchProductPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lrmall/dao/impl/EvaluateDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/product/DetailLoad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/detail.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lrmall/bean/Evaluate.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1399,91 +877,310 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#5629#5635#0#HTML" expanded="true" />
-            <element signature="e#5635#5641#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/order.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/orderlist.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="540">
           <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/usercenter.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/user_manager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/product_manager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/orders_merchan.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/orders_manager.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
+        <state relative-caret-position="960">
           <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/addtype_manager.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="960">
           <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user_manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/orders_merchan.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/usercenter.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="127" column="24" lean-forward="true" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/dao/ProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/manager/SelectType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/product/DetailLoad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/moreproduct.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/product/ProductShow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/manager.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="368" column="17" lean-forward="true" selection-start-line="368" selection-start-column="17" selection-end-line="368" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/merchant.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="342" column="17" lean-forward="true" selection-start-line="342" selection-start-column="17" selection-end-line="342" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/dao/TypeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/merchan/InitAllTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/addproduct_manager.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/merchan/TypeInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/product_manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="84" column="37" lean-forward="true" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/dao/impl/TypeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-359">
+          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/product_merchan.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="101" column="62" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/product_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/product_merchan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="131" column="16" lean-forward="true" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/dao/impl/ProductDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="148" column="129" selection-start-line="148" selection-start-column="129" selection-end-line="148" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/addproduct_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="95" column="13" lean-forward="true" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="56" column="15" lean-forward="true" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="80" column="24" lean-forward="true" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/moreproduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/orderlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="112" column="3" lean-forward="true" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="56" column="6" lean-forward="true" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/onload/SearchProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/onload/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="48" column="67" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/product/UpdateProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/product/SearchProductPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrmall/servlet/product/SelectProductByType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="23" column="59" lean-forward="true" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="62" column="10" lean-forward="true" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#27#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/moreproduct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="89" column="51" selection-start-line="89" selection-start-column="51" selection-end-line="89" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="81" column="38" lean-forward="true" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>

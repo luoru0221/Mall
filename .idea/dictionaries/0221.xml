@@ -10,6 +10,7 @@
       <w>infor</w>
       <w>luoru</w>
       <w>merchan</w>
+      <w>moreproduct</w>
       <w>navbar</w>
       <w>orderitem</w>
       <w>orderlist</w>
@@ -17,7 +18,10 @@
       <w>producttype</w>
       <w>recname</w>
       <w>setc</w>
+      <w>slibing</w>
       <w>subnav</w>
+      <w>typeid</w>
+      <w>typeitem</w>
       <w>usercenter</w>
       <w>userid</w>
     </words>

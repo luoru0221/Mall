@@ -11,6 +11,7 @@ $(function () {
         var productName = $productInfo.children(".con_input").eq(1).children(".productName_input").val();
         var productDescription = $productInfo.children(".con_area").children(".productDescription_input").text();
         var productPrice = $productInfo.children(".con_input").eq(2).children(".productPrice_input").val();
+        var productType = $productInfo.children(".select_con").children(".thirdType").val();
         var productImage = $productImg.children(".productImage_show").attr("src");
 
         if ($imageInput.val()) {
@@ -34,6 +35,7 @@ $(function () {
                             "productName": productName,
                             "productDescription": productDescription,
                             "productPrice": productPrice,
+                            "productType":productType,
                             "productImage": productImage
                         },
                         success: function (success) {
@@ -56,6 +58,7 @@ $(function () {
                     "productName": productName,
                     "productDescription": productDescription,
                     "productPrice": productPrice,
+                    "productType":productType,
                     "productImage": productImage
                 },
                 success: function (success) {
@@ -114,4 +117,107 @@ $(function () {
             $operation_div.removeClass("con_active");
         })
     });
+});
+
+/**
+ * 商品分类
+ */
+$(function () {
+
+    $(".select_con").each(function () {
+        var typeId = $(this).children("label").attr("typeId");
+        var $firstType = $(this).children(".firstType");
+        var $secondType = $(this).children(".secondType");
+        var $thirdType = $(this).children(".thirdType");
+        $.ajax({
+            url: "typeInit",
+            type: "GET",
+            dataType: "JSON",
+            data: {
+                "typeId": typeId
+            },
+            success: function (allTypes) {
+                console.log(allTypes);
+                for (var index1 in allTypes[0]) {
+                    var type1 = allTypes[0][index1];
+                    $firstType.append("<option value=" + type1['id'] + ">" + type1['name'] + "</option>")
+                }
+                for (var index2 in allTypes[1]) {
+                    var type2 = allTypes[1][index2];
+                    $secondType.append("<option value=" + type2['id'] + ">" + type2['name'] + "</option>")
+                }
+                for (var index3 in allTypes[2]) {
+                    var type3 = allTypes[2][index3];
+                    $thirdType.append("<option value=" + type3['id'] + ">" + type3['name'] + "</option>")
+                }
+            }
+        })
+    });
+});
+
+/**
+ * 三级联动
+ */
+$(function () {
+    var $firstType = $(".firstType");
+    var $secondType = $(".secondType");
+    $secondType.change(function () {
+        var $thirdType = $(this).siblings(".thirdType");
+        var secondType = $(this).val();
+        $.ajax({
+            url: "selectType",
+            type: "GET",
+            dataType: "JSON",
+            data: {
+                "fId": secondType
+            },
+            success: function (thirdTypes) {
+                $thirdType.empty();
+                for (var index in thirdTypes) {
+                    var thirdType = thirdTypes[index];
+                    $thirdType.append("<option value=" + thirdType['id'] + ">" + thirdType['name'] + "</option>")
+                }
+            }
+        })
+    });
+    $firstType.change(function () {
+        $secondType = $(this).siblings(".secondType");
+        var $thirdType = $(this).siblings(".thirdType");
+        var firstType = $(this).val();
+        $.ajax({
+            url: "selectType",
+            type: "GET",
+            dataType: "JSON",
+            data: {
+                "fId": firstType
+            },
+            success: function (secondTypes) {
+                $secondType.empty();
+                for (var index in secondTypes) {
+                    var secondType = secondTypes[index];
+                    $secondType.append("<option value=" + secondType['id'] + ">" + secondType['name'] + "</option>")
+                }
+                secondType = $secondType.val();
+                if (secondType == null) {
+                    $thirdType.empty();
+                } else {
+                    $.ajax({
+                        url: "selectType",
+                        type: "GET",
+                        dataType: "JSON",
+                        data: {
+                            "fId": secondType
+                        },
+                        success: function (thirdTypes) {
+                            $thirdType.empty();
+                            for (var index in thirdTypes) {
+                                var thirdType = thirdTypes[index];
+                                $thirdType.append("<option value=" + thirdType['id'] + ">" + thirdType['name'] + "</option>")
+                            }
+                        }
+                    })
+                }
+            }
+        })
+    })
 });

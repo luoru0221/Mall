@@ -102,7 +102,7 @@
     <div class="list_title priority">
         <h3 class="fl" id="model01">手机数码</h3>
         <div class="subtitle fl"></div>
-        <a href="list.jsp" class="goods_more fr" id="fruit_more">查看更多 ></a>
+<%--        <a href="list.jsp" class="goods_more fr" id="fruit_more">查看更多 ></a>--%>
     </div>
 
     <div class="goods_con priority">
@@ -137,7 +137,7 @@
         <h3 class="fl" id="model02">电脑办公</h3>
         <div class="subtitle fl">
         </div>
-        <a href="list.jsp" class="goods_more fr">查看更多 ></a>
+<%--        <a href="list.jsp" class="goods_more fr">查看更多 ></a>--%>
     </div>
 
     <div class="goods_con priority">
@@ -171,7 +171,7 @@
     <div class="list_title priority">
         <h3 class="fl" id="model03">美妆护理</h3>
         <div class="subtitle fl"></div>
-        <a href="list.jsp" class="goods_more fr">查看更多 ></a>
+<%--        <a href="list.jsp" class="goods_more fr">查看更多 ></a>--%>
     </div>
 
     <div class="goods_con priority">
@@ -205,7 +205,7 @@
     <div class="list_title priority">
         <h3 class="fl" id="model04">家居家装</h3>
         <div class="subtitle fl"></div>
-        <a href="list.jsp" class="goods_more fr">查看更多 ></a>
+<%--        <a href="list.jsp" class="goods_more fr">查看更多 ></a>--%>
     </div>
 
     <div class="goods_con priority">
@@ -239,7 +239,7 @@
     <div class="list_title priority">
         <h3 class="fl" id="model05">生活电器</h3>
         <div class="subtitle fl"></div>
-        <a href="list.jsp" class="goods_more fr">查看更多 ></a>
+<%--        <a href="list.jsp" class="goods_more fr">查看更多 ></a>--%>
     </div>
 
     <div class="goods_con priority">
@@ -273,7 +273,7 @@
     <div class="list_title priority">
         <h3 class="fl" id="model06">食品零食</h3>
         <div class="subtitle fl"></div>
-        <a href="list.jsp" class="goods_more fr">查看更多 ></a>
+<%--        <a href="list.jsp" class="goods_more fr">查看更多 ></a>--%>
     </div>
 
     <div class="goods_con priority">

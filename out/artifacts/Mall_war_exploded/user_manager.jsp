@@ -30,7 +30,7 @@
 </div>
 <div class="main_con priority">
     <div class="left_menu priority">
-        <h3>商家中心</h3>
+        <h3>管理员中心</h3>
         <ul id="menu">
             <li><a href="ordersManager" class="menu_a">订单管理</a></li>
             <li class="active"><a href="userManager" class="menu_a">用户管理</a></li>

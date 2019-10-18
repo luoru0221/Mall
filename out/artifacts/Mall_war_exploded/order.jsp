@@ -14,7 +14,7 @@
     <div class="header">
         <div class="welcome fl">欢迎来到1号店！</div>
         <c:if test="${sessionScope.userType == '1'}">
-            <div class="welcome fl"><a href="merchan.jsp">我的店铺</a></div>
+            <div class="welcome fl"><a href="ordersMerchan">我的店铺</a></div>
         </c:if>
         <c:if test="${sessionScope.userType == '2'}">
             <div class="welcome fl"><a href="javascript:">免费申请开店</a></div>
@@ -50,9 +50,9 @@
     <div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;我的订单</div>
     <div class="search_con fr">
         <label>
-            <input type="text" class="input_text fl" name="" placeholder="搜索商品">
+            <input type="text" class="input_text fl" id="search_keyword" placeholder="搜索商品">
         </label>
-        <input type="button" class="input_btn fr" name="" value="搜索">
+        <input type="button" class="input_btn fr" value="搜索">
     </div>
 </div>
 

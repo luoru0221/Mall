@@ -10,9 +10,9 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/list.css">
+    <link rel="stylesheet" type="text/css" href="css/moreproduct.css">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/list.js"></script>
+    <script type="text/javascript" src="js/moreproduct.js"></script>
 </head>
 <body>
 <div class="header_con">
@@ -54,7 +54,7 @@
     <a href="index.jsp" class="logo fl"><img src="images/logo03.png" alt="logo"></a>
     <div class="search_con fl">
         <label>
-            <input type="text" class="input_text fl" id="keyword_input" placeholder="搜索商品" keyword=${sessionScope.keyword}>
+            <input type="text" class="input_text fl" id="search_keyword" placeholder="搜索商品" keyword=${sessionScope.keyword}>
         </label>
         <input type="button" class="input_btn fr" onclick="searchProduct()" value="搜索">
     </div>
@@ -68,6 +68,19 @@
 <div class="navbar_con">
 </div>
 <div class="center_con priority">
+    <div class="product_type_list priority">
+        <ul>
+            <li class="f_type">${sessionScope.fatherType['name']}></li>
+            <c:forEach var="slibingType" items="${sessionScope.slibingTypes}">
+                <c:if test="${slibingType['id']==sessionScope.nowType}">
+                    <li class="c_type active" onclick="showMore(${slibingType['id']})" typeId="${slibingType['id']}">${slibingType['name']}</li>
+                </c:if>
+                <c:if test="${slibingType['id']!=sessionScope.nowType}">
+                    <li class="c_type" onclick="showMore(${slibingType['id']})" typeId="${slibingType['id']}">${slibingType['name']}</li>
+                </c:if>
+            </c:forEach>
+        </ul>
+    </div>
     <div class="warp priority">
         <ul class="goods_list">
 
@@ -75,11 +88,11 @@
     </div>
     <div class="pagenation priority">
         <a href="javascript:" class="prePage">&lt上一页</a>
-        <c:forEach var="page" items="${sessionScope.pages}">
-            <c:if test="${page==sessionScope.nowPage}">
+        <c:forEach var="page" items="${sessionScope.pageCodes}">
+            <c:if test="${page=='1'}">
                 <a href="#" class="pageCode active">${page}</a>
             </c:if>
-            <c:if test="${page!=sessionScope.nowPage}">
+            <c:if test="${page!='1'}">
                 <a href="#" class="pageCode">${page}</a>
             </c:if>
         </c:forEach>

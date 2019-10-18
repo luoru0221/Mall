@@ -145,8 +145,8 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
 
     @Override
     public int updateProduct(Product product) {
-        String sql = "UPDATE product set name=?,description=?,price=?,image=? WHERE id=?";
-        Object[] params = {product.getName(), product.getDescription(), product.getPrice(), product.getImage(), product.getId()};
+        String sql = "UPDATE product set name=?,description=?,price=?,image=?,type=? WHERE id=?";
+        Object[] params = {product.getName(), product.getDescription(), product.getPrice(), product.getImage(),product.getType(),product.getId()};
         try {
             return this.doUpdate(sql, params);
         } finally {
@@ -157,12 +157,12 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
     @Override
     public ArrayList<Product> selectLikeProduct(String keyword) {
         ArrayList<Product> likeProducts = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE name like '%"+keyword+"%' OR description like '%"+keyword+"%'";
+        String sql = "SELECT * FROM product WHERE name like '%" + keyword + "%' OR description like '%" + keyword + "%'";
         ResultSet resultSet = this.doQuery(sql, null);
         try {
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 Product product = new Product();
-                setProduct(resultSet,product);
+                setProduct(resultSet, product);
                 likeProducts.add(product);
             }
         } catch (SQLException e) {
@@ -174,14 +174,14 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
     }
 
     @Override
-    public ArrayList<Product> selectLikeProductLimit(String keyword,int start,int number) {
+    public ArrayList<Product> selectLikeProductLimit(String keyword, int start, int number) {
         ArrayList<Product> pageProducts = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE name like '%"+keyword+"%' OR description like '%"+keyword+"%' limit "+start+","+number+"";
+        String sql = "SELECT * FROM product WHERE name like '%" + keyword + "%' OR description like '%" + keyword + "%' limit " + start + "," + number + "";
         try {
             ResultSet resultSet = this.doQuery(sql, null);
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 Product product = new Product();
-                setProduct(resultSet,product);
+                setProduct(resultSet, product);
                 pageProducts.add(product);
             }
         } catch (SQLException e) {
@@ -190,6 +190,27 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
             this.close();
         }
         return pageProducts;
+    }
+
+    @Override
+    public ArrayList<Product> selectTypeProductLimit(int typeId, int page, int number) {
+        ArrayList<Product> products = new ArrayList<>();
+        int start = (page-1) * 15;
+        String sql = "SELECT * FROM product WHERE type = ? limit ?,?";
+        Object[] params = {typeId, start, number};
+        try {
+            ResultSet resultSet = this.doQuery(sql, params);
+            while (resultSet.next()) {
+                Product product = new Product();
+                setProduct(resultSet, product);
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return products;
     }
 
     /**

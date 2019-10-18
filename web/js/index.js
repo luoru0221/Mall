@@ -24,6 +24,9 @@ $(function () {
     });
 });
 
+/**
+ * 三级分类
+ */
 $(function () {
     $.ajax({
         url: "typeList",
@@ -32,7 +35,7 @@ $(function () {
         success: function (typeList) {
             var $menu = $(".sub_menu");
             console.log(typeList);
-            for(var Index in typeList){
+            for (var Index in typeList) {
 
                 var $menu_item = $("<li></li>");
                 var $level1 = $("<div class='level1'></div>");
@@ -40,18 +43,18 @@ $(function () {
                 var $list_group = $("<div class='list_group'></div>");
                 var firstType = typeList[Index];
 
-                var $level1_a = $("<a href='#'>"+firstType['name']+"</a>");
+                var $level1_a = $("<a href='#'>" + firstType['name'] + "</a>");
                 $level1_a.appendTo($level1);
                 var secondTypes = typeList[Index]['cTypes'];
-                for(var index in  secondTypes){
+                for (var index in  secondTypes) {
                     var secondType = secondTypes[index];
                     var thirdTypes = secondType['cTypes'];
 
-                    var $group_name = $("<div class='group_name fl'>"+secondType['name']+"&nbsp;&gt</div>");
+                    var $group_name = $("<div class='group_name fl'>" + secondType['name'] + "&nbsp;&gt</div>");
                     var $group_detail = $("<div class='group_detail fl'></div>");
-                    for(var inn in thirdTypes){
+                    for (var inn in thirdTypes) {
                         var thirdType = thirdTypes[inn];
-                        var $a_item = $("<a href='#' typeid="+thirdType['id']+">"+thirdType['name']+"</a>");
+                        var $a_item = $("<a href='javascript:showMore("+thirdType['id']+")' class='typeitem' typeid=" + thirdType['id'] + ">" + thirdType['name'] + "</a>");
                         $a_item.appendTo($group_detail);
                     }
                     $group_name.appendTo($list_group);
@@ -63,9 +66,14 @@ $(function () {
                 $menu_item.appendTo($menu);
             }
         }
-    })
+    });
 });
+
 function searchProduct() {
     var keyword = $("#search_keyword").val();
-    window.location.href = "searchProduct?keyword="+keyword;
+    window.location.href = "searchProduct?keyword=" + keyword;
+}
+
+function showMore(typeId) {
+    location.href = "productShow?typeId=" + typeId;
 }

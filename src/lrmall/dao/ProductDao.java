@@ -18,4 +18,6 @@ public interface ProductDao {
     ArrayList<Product> selectLikeProduct(String keyword);   //关键字模糊搜索商品
 
     ArrayList<Product> selectLikeProductLimit(String keyword,int page,int number); //关键字加搜索条数限制搜索
+
+    ArrayList<Product> selectTypeProductLimit(int typeId,int page,int number);  //分类查找每一页的id
 }

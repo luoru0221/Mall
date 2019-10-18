@@ -50,9 +50,9 @@
     <div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;我的订单</div>
     <div class="search_con fr">
         <label>
-            <input type="text" class="input_text fl" name="" placeholder="搜索商品">
+            <input type="text" class="input_text fl" id="search_keyword" placeholder="搜索商品">
         </label>
-        <input type="button" class="input_btn fr" name="" value="搜索">
+        <input type="button" class="input_btn fr" value="搜索">
     </div>
 </div>
 

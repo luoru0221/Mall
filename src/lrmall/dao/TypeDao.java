@@ -24,4 +24,20 @@ public interface TypeDao {
      * @return 某一分类的所有子分类对象
      */
     ArrayList<Type> selectChildrenTypes(int fid);
+
+    /**
+     * 查找某一分类的同级分类
+     * @time 2019年10月18日19:51:37
+     * @param id 分类ID
+     * @return 该分类的全部同级分类
+     */
+    ArrayList<Type> selectSlibingTypes(int id);
+
+    /**
+     * 查找父级分类
+     * @time 2019年10月18日20:04:54
+     * @param id 分类ID
+     * @return 父级分类
+     */
+    Type selectFatherType(int id);
 }

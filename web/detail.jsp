@@ -55,9 +55,9 @@
     <a href="index.jsp" class="logo fl"><img src="images/logo03.png" alt="logo"></a>
     <div class="search_con fl">
         <label>
-            <input type="text" class="input_text fl" name="" placeholder="搜索商品">
+            <input type="text" class="input_text fl" id="search_keyword" placeholder="搜索商品">
         </label>
-        <input type="button" class="input_btn fr" name="" value="搜索">
+        <input type="button" class="input_btn fr" onclick="searchProduct()" value="搜索">
     </div>
     <div class="guest_cart fr">
         <c:if test="${sessionScope.loginId != null}">

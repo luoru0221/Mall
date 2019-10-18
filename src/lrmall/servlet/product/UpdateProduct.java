@@ -22,6 +22,7 @@ public class UpdateProduct extends HttpServlet {
         String productDescription = req.getParameter("productDescription");
         double productPrice = Double.parseDouble(req.getParameter("productPrice"));
         String productImage = req.getParameter("productImage");
+        int productType = Integer.parseInt(req.getParameter("productType"));
 
         Product product = new Product();
         product.setId(productId);
@@ -29,6 +30,7 @@ public class UpdateProduct extends HttpServlet {
         product.setDescription(productDescription);
         product.setPrice(productPrice);
         product.setImage(productImage);
+        product.setType(productType);
         productDao.updateProduct(product);
 
         PrintWriter writer = resp.getWriter();

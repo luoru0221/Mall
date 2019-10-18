@@ -16,7 +16,7 @@
     <div class="header">
         <div class="welcome fl">欢迎来到1号店！</div>
         <c:if test="${sessionScope.userType == '1'}">
-            <div class="welcome fl"><a href="merchan.jsp">我的店铺</a></div>
+            <div class="welcome fl"><a href="ordersMerchan">我的店铺</a></div>
         </c:if>
         <c:if test="${sessionScope.userType == '2'}">
             <div class="welcome fl"><a href="javascript:">免费申请开店</a></div>

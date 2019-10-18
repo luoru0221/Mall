@@ -56,7 +56,7 @@
         <label>
             <input type="text" class="input_text fl" id="keyword_input" placeholder="搜索商品" keyword=${sessionScope.keyword}>
         </label>
-        <input type="button" class="input_btn fr" name="" value="搜索">
+        <input type="button" class="input_btn fr" onclick="searchProduct()" value="搜索">
     </div>
     <div class="guest_cart fr">
         <c:if test="${sessionScope.loginId != null}">
@@ -70,81 +70,7 @@
 <div class="center_con priority">
     <div class="warp priority">
         <ul class="goods_list">
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
-            <li>
-                <a href=""><img src="" alt="img"></a>
-                <h4><a href=""></a></h4>
-                <div class="price"></div>
-            </li>
+
         </ul>
     </div>
     <div class="pagenation priority">

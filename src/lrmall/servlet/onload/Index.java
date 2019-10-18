@@ -43,9 +43,10 @@ public class Index extends HttpServlet {
      */
     private ArrayList<ArrayList<Product>> queryLists() {
         ArrayList<ArrayList<Product>> arrayLists = new ArrayList<>();
+        int[] recommend = {110,111,115,116,119,122};
         ArrayList<Product> arrayList;
         for (int i = 0; i < 6; i++) {
-            arrayList = productDao.queryProductByType(i);
+            arrayList = productDao.queryProductByType(recommend[i]);
             arrayLists.add(arrayList);
         }
         return arrayLists;

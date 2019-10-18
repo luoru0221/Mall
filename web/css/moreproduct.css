@@ -113,9 +113,22 @@
     color: #333;
 }
 
-.warp {
+.warp, .product_type_list {
     width: 980px;
     margin: 0 auto;
+}
+
+.product_type_list li {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    font-size: 16px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.c_type:hover {
+    color: red;
 }
 
 .goods_list {
@@ -159,6 +172,7 @@
     position: relative;
     color: #da260e;
     font-size: 14px;
+    text-align: center;
 }
 
 .pagenation {
@@ -182,4 +196,7 @@
     background-color: #fff;
     color: red;
     font-weight: bold;
+}
+.product_type_list ul .active{
+    color: red;
 }
