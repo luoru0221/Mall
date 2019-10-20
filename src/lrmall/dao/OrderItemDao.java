@@ -16,10 +16,9 @@ public interface OrderItemDao {
      * 创建订单项
      *
      * @param orderItem OrderItemd对象
-     * @return 影响的数据条数
      * @time 2019年10月13日11:56:42
      */
-    int createOrderItem(OrderItem orderItem);
+    void createOrderItem(OrderItem orderItem);
 
     /**
      * 删除订单项
@@ -29,15 +28,6 @@ public interface OrderItemDao {
      * @time 2019年10月13日19:07:54
      */
     int delateOrderItem(OrderItem orderItem);
-
-    /**
-     * 修改订单项
-     *
-     * @param orderItem 待修改的OrderList对象
-     * @return 影响的数据条数
-     * @time 2019年10月13日19:08:35
-     */
-    int updateOrderItem(OrderItem orderItem);
 
     /**
      * 查询某一用户的所有订单

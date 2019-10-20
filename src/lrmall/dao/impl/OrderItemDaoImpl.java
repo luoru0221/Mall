@@ -13,11 +13,11 @@ import java.util.HashMap;
 public class OrderItemDaoImpl extends DbUtil implements OrderItemDao {
 
     @Override
-    public int createOrderItem(OrderItem orderItem) {
+    public void createOrderItem(OrderItem orderItem) {
         String sql = "INSERT INTO orderitem (oid,pid,number,type) values(?,?,?,?)";
         Object[] params = {orderItem.getOid(), orderItem.getPid(), orderItem.getNumber(), orderItem.getType()};
         try {
-            return this.doUpdate(sql, params);
+            this.doUpdate(sql, params);
         } finally {
             this.close();
         }
@@ -33,10 +33,6 @@ public class OrderItemDaoImpl extends DbUtil implements OrderItemDao {
         }
     }
 
-    @Override
-    public int updateOrderItem(OrderItem orderItem) {
-        return 0;
-    }
 
     @Override
     public HashMap<String, ArrayList<OrderItem>> selectAllOrdersByUserId(String uid) {

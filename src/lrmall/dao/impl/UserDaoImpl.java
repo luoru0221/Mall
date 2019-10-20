@@ -10,10 +10,6 @@ import java.util.ArrayList;
 
 public class UserDaoImpl extends DbUtil implements UserDao {
 
-    /**
-     * 根据用户账号查询用户所有信息
-     * 参数为用户的id，返回值为用户的所有信息
-     */
     @Override
     public User queryUserById(String id) {
         User user = null;
@@ -22,7 +18,7 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         try {
             if (resultSet.next()) {
                 user = new User();
-                setUser(resultSet,user);
+                setUser(resultSet, user);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -32,10 +28,6 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         return user;
     }
 
-    /**
-     * 添加新用户，参数为User对象
-     * 返回值大于0则添加成功
-     */
     @Override
     public int addUser(User newUser) {
         try {
@@ -47,20 +39,16 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         }
     }
 
-    /**
-     * 根据Id删除User
-     */
     @Override
     public int deleteUserById(String id) {
         String sql = "DELETE FROM USERS WHERE id = ?";
-        return this.doUpdate(sql, new Object[]{id});
+        try {
+            return this.doUpdate(sql, new Object[]{id});
+        } finally {
+            this.close();
+        }
     }
 
-    /**
-     * @param user User对象,包含id和password
-     * @return 影响的数据条数
-     * @time 2019年10月12日14:32:30
-     */
     @Override
     public int updateUserPwd(User user) {
         try {
@@ -72,12 +60,6 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         }
     }
 
-    /**
-     * 修改收件人的姓名和收货地址
-     *
-     * @param user User对象，包含用户的账号、收件人姓名和地址
-     * @return 影响的数据条数
-     */
     @Override
     public int updateUserAddress(User user) {
         try {
@@ -89,10 +71,6 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         }
     }
 
-    /**
-     * @return 除后台管理员之外的所有User对象的ArrayList集合
-     * @time 2019年10月10日20:20:11
-     */
     @Override
     public ArrayList<User> queryAllUsers() {
         ArrayList<User> users = new ArrayList<>();
@@ -116,9 +94,9 @@ public class UserDaoImpl extends DbUtil implements UserDao {
     @Override
     public void updateUserType(User user) {
         String sql = "UPDATE USERS set type = ? Where id = ?";
-        Object[] params = {user.getType(),user.getId()};
+        Object[] params = {user.getType(), user.getId()};
         try {
-            this.doUpdate(sql,params);
+            this.doUpdate(sql, params);
         } finally {
             this.close();
         }
