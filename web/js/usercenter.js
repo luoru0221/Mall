@@ -15,7 +15,7 @@ $(function () {
         type: "POST",
         success: function (user) {
             //请求到user对象
-            $("#uId").text(user["id"]);
+            $("#uId").text(user["id"].slice(0,6));
             $("#uName").text(user["name"]);
             $("#uEmail").text(user["email"]);
             $("#recName").text(user["recName"]);
