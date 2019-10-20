@@ -1,5 +1,10 @@
 package lrmall.bean;
 
+/**
+ *  @author: Luoru
+ *  @Date: 2019/10/19 3:39
+ *  @Description: 用户
+ */
 public class User {
     private String id;
     private String name;

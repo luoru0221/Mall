@@ -10,7 +10,7 @@ function addProduct() {
     var pPrice = $('#pPrice').val();    //商品价格
     var pImage = $('#pImage')[0].files[0];     //商品图片
     var pImageAddress = null;
-    var pType = $('option:selected', '#pType').index(); //商品分类
+    var pType = $('#thirdType').val(); //商品三级分类
     datas.append("pImage", pImage);
 
     $.ajax({
@@ -41,8 +41,7 @@ function addProduct() {
     alert("添加成功");
     $("input").val("");
     $("textarea").val("");
-    $("select").find("option:first").prop("selected", true);
-    $("#pImageShow").src = "";
+    $("#pImageShow").attr("src","");
     dom.attr("disable", true);
 }
 

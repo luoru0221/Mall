@@ -396,6 +396,7 @@
 }
 
 .con_btn button {
+    cursor: pointer;
     height: 40px;
     width: 100px;
     margin: 20px;

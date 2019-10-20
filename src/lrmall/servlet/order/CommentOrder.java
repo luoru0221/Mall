@@ -2,7 +2,6 @@ package lrmall.servlet.order;
 
 import lrmall.bean.Evaluate;
 import lrmall.bean.OrderItem;
-import lrmall.dao.OrderItemDao;
 import lrmall.dao.impl.EvaluateDaoImpl;
 import lrmall.dao.impl.OrderItemDaoImpl;
 import lrmall.utils.LocalTime;
@@ -19,10 +18,11 @@ import java.io.PrintWriter;
 public class CommentOrder extends HttpServlet {
     private EvaluateDaoImpl evaluateDao = new EvaluateDaoImpl();
     private OrderItemDaoImpl orderItemDao = new OrderItemDaoImpl();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int pid = Integer.parseInt(req.getParameter("pid"));  //商品id
-        String uid = (String)req.getSession().getAttribute("loginId");  //用户Id
+        String uid = (String) req.getSession().getAttribute("loginId");  //用户Id
         String content = req.getParameter("content");   //评价内容
         String orderId = req.getParameter("orderId");
         String time = LocalTime.getStringDate();  //评价时间
@@ -37,11 +37,13 @@ public class CommentOrder extends HttpServlet {
         orderItem.setOid(orderId);
         orderItem.setPid(pid);
 
-        evaluateDao.addEvaluateForProduct(evaluate);
+        int changeNumber = evaluateDao.addEvaluateForProduct(evaluate);
         orderItemDao.updateOrderItemType(orderItem);
         PrintWriter writer = resp.getWriter();
-        writer.print(true);
-        writer.flush();
+        if (changeNumber > 0) {
+            writer.print(true);
+            writer.flush();
+        }
         writer.close();
     }
 

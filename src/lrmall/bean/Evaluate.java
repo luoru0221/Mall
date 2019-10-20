@@ -1,12 +1,17 @@
 package lrmall.bean;
 
+/**
+ *  @author: Luoru
+ *  @Date: 2019/10/19 3:37
+ *  @Description: 评价
+ */
 public class Evaluate {
 
     private int id;
-    private int pid;  //商品的id
-    private String uid;  //用户id
-    private String content;  //评价内容
-    private String time;   //评价时间
+    private int pid;
+    private String uid;
+    private String content;
+    private String time;
 
     public int getId() {
         return id;

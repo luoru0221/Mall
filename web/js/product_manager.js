@@ -12,7 +12,7 @@ $(function () {
 
         var productId = $productInfo.children(".con_input").eq(0).children(".productId_input").val();
         var productName = $productInfo.children(".con_input").eq(1).children(".productName_input").val();
-        var productDescription = $productInfo.children(".con_area").children(".productDescription_input").text();
+        var productDescription = $productInfo.children(".con_area").children(".productDescription_input").val();
         var productType = $productInfo.children(".select_con").children(".thirdType").val();
         var productPrice = $productInfo.children(".con_input").eq(2).children(".productPrice_input").val();
         var productImage = $productImg.children(".productImage_show").attr("src");
@@ -134,6 +134,7 @@ $(function () {
         $.ajax({
             url: "typeInit",
             type: "GET",
+            async:false,
             dataType: "JSON",
             data: {
                 "typeId": typeId

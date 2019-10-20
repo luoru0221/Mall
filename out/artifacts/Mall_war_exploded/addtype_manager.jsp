@@ -42,31 +42,68 @@
     <%--分类管理--%>
     <div class="right_content fl con_active">
         <h3 class="content_title">分类管理</h3>
-        <div class="add_type_con">
-            <h4>添加一级分类:</h4>
-            <div class="input_con">
-                <input type="text" id="first_type_input" placeholder="填写一级分类名">
-                <button id="first_add_btn">添加</button>
+        <div class="add_type fl">
+            <div class="add_type_con">
+                <h4>添加一级分类:</h4>
+                <div class="input_con">
+                    <input type="text" id="first_type_input" placeholder="填写一级分类名">
+                    <button id="first_add_btn">添加</button>
+                </div>
+            </div>
+            <div class="add_type_con">
+                <h4>添加二级分类:</h4>
+                <div class="input_con">
+                    <select id="first_select">
+                    </select>
+                    <input type="text" id="second_type_input" placeholder="填写二级分类名">
+                    <button id="second_add_btn">添加</button>
+                </div>
+            </div>
+            <div class="add_type_con">
+                <h4>添加三级分类:</h4>
+                <div class="input_con">
+                    <select id="second_select">
+                    </select>
+                    <select id="third_select">
+                    </select>
+                    <input type="text" placeholder="填写三级分类名">
+                    <button id="third_add_btn">添加</button>
+                </div>
             </div>
         </div>
-        <div class="add_type_con">
-            <h4>添加二级分类:</h4>
-            <div class="input_con">
-                <select id="first_select">
-                </select>
-                <input type="text" id="second_type_input" placeholder="填写二级分类名">
-                <button id="second_add_btn">添加</button>
+        <div class="update_type fr">
+            <div class="update_type_con">
+                <h4>修改三级分类:</h4>
+                <div class="input_con">
+                    <select id="update_thirdType_first">
+                    </select>
+                    <select id="update_thirdType_second">
+                    </select>
+                    <select id="update_thirdType_third">
+                    </select>
+                    <input type="text" placeholder="填写新的三级分类名">
+                    <button id="update_thirdType_btn">修改</button>
+                </div>
             </div>
-        </div>
-        <div class="add_type_con">
-            <h4>填加三级分类:</h4>
-            <div class="input_con">
-                <select id="second_select">
-                </select>
-                <select id="third_select">
-                </select>
-                <input type="text" placeholder="填写三级分类名">
-                <button id="third_add_btn">添加</button>
+            <div class="update_type_con">
+                <h4>修改二级分类:</h4>
+                <div class="input_con">
+                    <select id="update_secondType_first">
+                    </select>
+                    <select id="update_secondType_second">
+                    </select>
+                    <input type="text" placeholder="填写新的二级分类名">
+                    <button id="update_secondType_btn">修改</button>
+                </div>
+            </div>
+            <div class="update_type_con">
+                <h4>修改一级分类:</h4>
+                <div class="input_con">
+                    <select id="update_firstType_first">
+                    </select>
+                    <input type="text" placeholder="填写新的一级分类名">
+                    <button id="update_firstType_btn">修改</button>
+                </div>
             </div>
         </div>
     </div>

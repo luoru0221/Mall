@@ -1,5 +1,10 @@
 package lrmall.bean;
 
+/**
+ *  @author: Luoru
+ *  @Date: 2019/10/19 3:38
+ *  @Description: 商品
+ */
 public class Product {
     private int id; //商品id
     private String name; //商品名称

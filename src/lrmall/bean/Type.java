@@ -2,6 +2,11 @@ package lrmall.bean;
 
 import java.util.ArrayList;
 
+/**
+ *  @author: Luoru
+ *  @Date: 2019/10/19 3:39
+ *  @Description: 分类
+ */
 public class Type {
     private int id;  //id
     private int fid;  //父级分类id

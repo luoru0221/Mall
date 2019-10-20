@@ -9,11 +9,11 @@ import java.util.HashMap;
 
 public class OrderDaoImpl extends DbUtil implements OrderDao {
     @Override
-    public int createOrder(Order order) {
+    public void createOrder(Order order) {
         String sql = "INSERT INTO orders (id,uid,price,address,name) VALUES (?,?,?,?,?)";
         Object[] params = {order.getId(), order.getUid(), order.getPrice(), order.getAddress(), order.getName()};
         try {
-            return this.doUpdate(sql, params);
+            this.doUpdate(sql, params);
         } finally {
             this.close();
         }

@@ -113,6 +113,17 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         return users;
     }
 
+    @Override
+    public void updateUserType(User user) {
+        String sql = "UPDATE USERS set type = ? Where id = ?";
+        Object[] params = {user.getType(),user.getId()};
+        try {
+            this.doUpdate(sql,params);
+        } finally {
+            this.close();
+        }
+    }
+
     /**
      * @param resultSet 数据库返回的所有User对象的结果集
      * @param user      需设置属性值的User对象

@@ -32,4 +32,6 @@ public interface UserDao {
      * @time 2019年10月10日20:20:11
      */
     ArrayList<User> queryAllUsers();
+
+    void updateUserType(User user);
 }

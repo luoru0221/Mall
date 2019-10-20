@@ -15,11 +15,6 @@ import java.util.ArrayList;
  */
 public class ProductDaoImpl extends DbUtil implements ProductDao {
 
-    /**
-     * @param id 商品id
-     * @return product 根据id查询到的Product对象
-     * @time 2019年10月10日15:20:28
-     */
     @Override
     public Product queryProductById(int id) {
         String sql = "SELECT * FROM PRODUCT WHERE id = ?";
@@ -39,28 +34,18 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
         return product;
     }
 
-    /**
-     * @param product 需要添加的Product对象
-     * @return 添加操作影响的数据项数
-     * @time 2019年10月10日15:22:21
-     */
     @Override
-    public int addProduct(Product product) {
+    public void addProduct(Product product) {
         try {
             String sql = "INSERT INTO Product(name,description,price,image,type,store) VALUES(?,?,?,?,?,?);";
             Object[] params = {product.getName(), product.getDescription(), product.getPrice(), product.getImage(),
                     product.getType(), product.getStore()};
-            return this.doUpdate(sql, params);
+            this.doUpdate(sql, params);
         } finally {
             this.close();
         }
     }
 
-    /**
-     * @param type Product对象的商品类别type属性
-     * @return 根据type查询到的所有Product的ArrayList集合
-     * @time 2019年10月10日15:29:08
-     */
     @Override
     public ArrayList<Product> queryProductByType(int type) {
         ArrayList<Product> arrayList = new ArrayList<>();
@@ -83,12 +68,6 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
         return arrayList;
     }
 
-
-    /**
-     * @param store 店铺的id
-     * @return 所有属于该店铺的Product对象的ArrayList集合
-     * @time 2019年10月10日15:26:45
-     */
     @Override
     public ArrayList<Product> queryProductByStore(String store) {
         ArrayList<Product> products = new ArrayList<>();
@@ -109,10 +88,6 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
         return products;
     }
 
-    /**
-     * @return 数据库中所有的Product对象的ArrayList集合
-     * @time 2019年10月10日15:27:12
-     */
     @Override
     public ArrayList<Product> queryAllProducts() {
         ArrayList<Product> products = new ArrayList<>();
@@ -144,11 +119,11 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
     }
 
     @Override
-    public int updateProduct(Product product) {
+    public void updateProduct(Product product) {
         String sql = "UPDATE product set name=?,description=?,price=?,image=?,type=? WHERE id=?";
-        Object[] params = {product.getName(), product.getDescription(), product.getPrice(), product.getImage(),product.getType(),product.getId()};
+        Object[] params = {product.getName(), product.getDescription(), product.getPrice(), product.getImage(), product.getType(), product.getId()};
         try {
-            return this.doUpdate(sql, params);
+            this.doUpdate(sql, params);
         } finally {
             this.close();
         }
@@ -195,7 +170,7 @@ public class ProductDaoImpl extends DbUtil implements ProductDao {
     @Override
     public ArrayList<Product> selectTypeProductLimit(int typeId, int page, int number) {
         ArrayList<Product> products = new ArrayList<>();
-        int start = (page-1) * 15;
+        int start = (page - 1) * 15;
         String sql = "SELECT * FROM product WHERE type = ? limit ?,?";
         Object[] params = {typeId, start, number};
         try {

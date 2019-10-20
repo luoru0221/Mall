@@ -423,6 +423,7 @@
 }
 
 .con_btn button {
+    cursor: pointer;
     height: 40px;
     width: 100px;
     margin: 20px;
@@ -466,11 +467,11 @@
     height: 350px;
 }
 
-.add_type_con {
+.add_type_con,.update_type_con{
     margin-left: 20px;
     margin-bottom: 40px;
 }
-.add_type_con h4{
+.add_type_con h4,.update_type_con h4{
     font-size: 16px;
 }
 

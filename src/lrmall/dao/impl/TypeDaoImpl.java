@@ -127,4 +127,15 @@ public class TypeDaoImpl extends DbUtil implements TypeDao {
         }
         return type;
     }
+
+    @Override
+    public void updateTypeName(Type type) {
+        String sql = "update producttype set name=? where id=?";
+        Object[] params = {type.getName(),type.getId()};
+        try {
+            this.doUpdate(sql,params);
+        } finally {
+            this.close();
+        }
+    }
 }

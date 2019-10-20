@@ -1,12 +1,17 @@
 package lrmall.bean;
 
+/**
+ *  @author: Luoru
+ *  @Date: 2019/10/19 3:38
+ *  @Description: 订单项
+ */
 public class OrderItem {
-    private int id; //id主键
-    private String oid; //订单编号
-    private int pid;  //商品id
-    private int number;   //商品数量
-    private int type;  //状态
-    private Product product; //订单项包括的商品
+    private int id;
+    private String oid;
+    private int pid;
+    private int number;
+    private int type;
+    private Product product;
     private String uid;
 
     public String getUid() {

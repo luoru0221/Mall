@@ -24,7 +24,7 @@
             <div class="welcome fl"><a href="ordersMerchan">我的店铺</a></div>
         </c:if>
         <c:if test="${sessionScope.userType == '2'}">
-            <div class="welcome fl"><a href="javascript:">免费申请开店</a></div>
+            <div class="welcome fl"><a href="javascript:beStore()">免费申请开店</a></div>
         </c:if>
         <div class="fr">
             <div class="login_btn fl">
@@ -87,13 +87,8 @@
             <a href="#">更多 &gt;</a>
         </div>
         <ul class="news_list">
-            <li><a href="#">i7顽石低至4199元</a></li>
-            <li><a href="#">奥克斯专场 正1匹空调1313元抢</a></li>
-            <li><a href="#">荣耀9青春版 高配 领券立减220元</a></li>
-            <li><a href="#">美多探索公益新模式</a></li>
-            <li><a href="#">i7顽石低至4199元</a></li>
-            <li><a href="#">正1匹空调1313元抢</a></li>
-            <li><a href="#">奥克斯专场 正1匹空调1313元抢</a></li>
+            <li><a href="http://www.iqiyi.com/playlist567516202.html" target="_blank">庆祝中华人民共和国成立70周年大会</a></li>
+            <li><a href="https://www.bilibili.com/video/av50351111" target="_blank">黑马最新JavaWeb入门到入土</a></li>
         </ul>
     </div>
 </div>

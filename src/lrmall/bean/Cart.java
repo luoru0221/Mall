@@ -1,13 +1,15 @@
 package lrmall.bean;
 
 /**
- * 购物车
+ * @author: Luoru
+ * @Date: 2019/10/19 3:36
+ * @Description: 购物车
  */
 public class Cart {
-    private String uid;//用户id
-    private int pid;//商品id
-    private int number;//商品数量
-    private int type;  //状态
+    private String uid;
+    private int pid;
+    private int number;
+    private int type;
 
     public int getType() {
         return type;

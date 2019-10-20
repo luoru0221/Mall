@@ -21,7 +21,7 @@ $(function () {
                         var product = products[index];
                         var $goods_li = $("<li></li>");
                         var $goods_li_a = $("<a href='detailLoad?productId=" + product['id'] + "'><img src='" + product['image'] + "' alt=''></a>");
-                        var $goods_li_h4 = $("<h4><a href='detailLoad?productId=" + product['id'] + "'></a></h4>");
+                        var $goods_li_h4 = $("<h4><a href='detailLoad?productId=" + product['id'] + "'>"+product['name']+"</a></h4>");
                         var $goods_li_div = $("<div class='price'>￥" + product['price'] + "</div>");
 
                         $goods_li_a.appendTo($goods_li);
@@ -54,7 +54,7 @@ $(function () {
                         var product = products[index];
                         var $goods_li = $("<li></li>");
                         var $goods_li_a = $("<a href='detailLoad?productId=" + product['id'] + "'><img src='" + product['image'] + "' alt=''></a>");
-                        var $goods_li_h4 = $("<h4><a href='detailLoad?productId=" + product['id'] + "'></a></h4>");
+                        var $goods_li_h4 = $("<h4><a href='detailLoad?productId=" + product['id'] + "'>"+product['name']+"</a></h4>");
                         var $goods_li_div = $("<div class='price'>￥" + product['price'] + "</div>");
 
                         $goods_li_a.appendTo($goods_li);
@@ -86,7 +86,7 @@ $(function () {
                 var product = products[index];
                 var $goods_li = $("<li></li>");
                 var $goods_li_a = $("<a href='detailLoad?productId=" + product['id'] + "'><img src='" + product['image'] + "' alt=''></a>");
-                var $goods_li_h4 = $("<h4><a href='detailLoad?productId=" + product['id'] + "'></a></h4>");
+                var $goods_li_h4 = $("<h4><a href='detailLoad?productId=" + product['id'] + "'>"+product['name']+"</a></h4>");
                 var $goods_li_div = $("<div class='price'>￥" + product['price'] + "</div>");
 
                 $goods_li_a.appendTo($goods_li);

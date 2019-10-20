@@ -41,7 +41,7 @@ function addProduct() {
     alert("添加成功");
     $("input").val("");
     $("textarea").val("");
-    $("#pImageShow").src = "";
+    $("#pImageShow").attr("src", "");
     dom.attr("disable", true);
 }
 

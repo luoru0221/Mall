@@ -1,9 +1,13 @@
 package lrmall.bean;
-
+/**
+ *  @author: Luoru
+ *  @Date: 2019/10/19 3:37
+ *  @Description: 订单
+ */
 public class Order {
-    private String id;  //订单编号
-    private String uid;  //用户Id
-    private double price;   //订单总价
+    private String id;
+    private String uid;
+    private double price;
     private String address;
     private String name;
 
