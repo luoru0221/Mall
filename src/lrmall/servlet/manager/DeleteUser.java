@@ -16,11 +16,13 @@ public class DeleteUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String userId = req.getParameter("userId");
-        userDao.deleteUserById(userId);
-        PrintWriter writer = resp.getWriter();
-        writer.print(true);
-        writer.flush();
-        writer.close();
+        int changeNumber = userDao.deleteUserById(userId);
+        if (changeNumber > 0) {
+            PrintWriter writer = resp.getWriter();
+            writer.print(true);
+            writer.flush();
+            writer.close();
+        }
     }
 
     @Override

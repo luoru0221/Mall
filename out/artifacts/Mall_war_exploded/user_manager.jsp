@@ -38,6 +38,10 @@
             <li><a href="addproduct_manager.jsp" class="menu_a">添加商品</a></li>
             <li><a href="addtype_manager.jsp" class="menu_a">分类管理</a></li>
         </ul>
+        <div class="search_user_con">
+            <input type="text" id="search_user" placeholder="搜索用户">
+            <button onclick="searchUser()">搜索</button>
+        </div>
     </div>
     <!--    用户管理页-->
     <div class="right_content priority con_active">

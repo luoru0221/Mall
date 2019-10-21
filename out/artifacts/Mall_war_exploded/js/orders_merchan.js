@@ -23,6 +23,7 @@ $(function () {
             success:function (success) {
                 if(success){
                     alert("已发货");
+                    window.location.reload();
                 }else{
                     alert("系统繁忙，请稍后重试！");
                 }

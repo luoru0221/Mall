@@ -102,6 +102,25 @@ public class UserDaoImpl extends DbUtil implements UserDao {
         }
     }
 
+    @Override
+    public ArrayList<User> searchLikeUsers(String keyword) {
+        ArrayList<User> users = new ArrayList<>();
+        String sql = "select * from users where id like '%"+keyword+"%' or name like '%"+keyword+"%'";
+        try {
+            ResultSet resultSet = this.doQuery(sql, null);
+            while(resultSet.next()){
+                User user = new User();
+                setUser(resultSet,user);
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close();
+        }
+        return users;
+    }
+
     /**
      * @param resultSet 数据库返回的所有User对象的结果集
      * @param user      需设置属性值的User对象

@@ -27,3 +27,7 @@ $(function () {
         }
     })
 });
+function searchUser() {
+    var keyword = $("#search_user").val();
+    window.location.href = "searchUsers?keyword="+keyword;
+}

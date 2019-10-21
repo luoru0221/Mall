@@ -49,4 +49,6 @@ public interface UserDao {
     ArrayList<User> queryAllUsers();
 
     void updateUserType(User user);
+
+    ArrayList<User> searchLikeUsers(String keyword);
 }

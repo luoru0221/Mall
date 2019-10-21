@@ -58,6 +58,7 @@ $(function () {
             success: function (success) {
                 if (success) {
                     alert("支付成功！");
+                    window.location.reload();
                 }
             }
         })
@@ -78,6 +79,7 @@ $(function () {
             success: function (success) {
                 if(success){
                     alert("收货成功！");
+                    window.location.reload();
                 }
             }
         })
@@ -105,6 +107,7 @@ $(function () {
                 success: function (success) {
                     if (success) {
                         alert("评价成功！");
+                        window.location.reload();
                     }
                 }
             })

@@ -474,7 +474,22 @@
 .add_type_con h4,.update_type_con h4{
     font-size: 16px;
 }
-
+.search_user_con input{
+    height: 25px;
+    width: 120px;
+    line-height: 25px;
+    font-family: 'Microsoft YaHei', serif;
+}
+.search_user_con button{
+    height: 25px;
+    width: 60px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Microsoft YaHei', serif;
+    color: #fff;
+    background-color: red;
+    cursor: pointer;
+}
 .input_con {
     height: 30px;
     margin-top: 10px;
